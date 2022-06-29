@@ -1,0 +1,54 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.2.32519.379
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LocacaoNetAPI", "LocacaoNetAPI\LocacaoNetAPI.csproj", "{797050ED-F544-433F-8A1C-8472513CE468}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "0 - Application", "0 - Application", "{7BA75DCB-3CA4-4A80-A2DA-651F7ED86853}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "1 - Domain", "1 - Domain", "{EF85635B-5F1C-48C7-BEB7-2185E14AF54D}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "2 - Infra", "2 - Infra", "{10D07B86-C7AA-423A-8AD1-3B0E62ACF5DD}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "2.1 - Data", "2.1 - Data", "{B13ABAC8-2317-412D-A1BB-7BD7E70AFEA0}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "2.2 - CrossCutting", "2.2 - CrossCutting", "{56C3F19A-CFA2-4FEB-BB97-2E116C923EFE}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LocacaoNetAPI.Domain", "LocacaoNetAPI.Domain\LocacaoNetAPI.Domain.csproj", "{6B1DABBB-D97E-4A31-89C8-D53C6C8D5149}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LocacaoNetAPI.Data", "LocacaoNetAPI.Data\LocacaoNetAPI.Data.csproj", "{DC73344A-2435-4CAA-A2B9-DADDA0AB3C48}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{797050ED-F544-433F-8A1C-8472513CE468}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{797050ED-F544-433F-8A1C-8472513CE468}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{797050ED-F544-433F-8A1C-8472513CE468}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{797050ED-F544-433F-8A1C-8472513CE468}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6B1DABBB-D97E-4A31-89C8-D53C6C8D5149}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6B1DABBB-D97E-4A31-89C8-D53C6C8D5149}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6B1DABBB-D97E-4A31-89C8-D53C6C8D5149}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6B1DABBB-D97E-4A31-89C8-D53C6C8D5149}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DC73344A-2435-4CAA-A2B9-DADDA0AB3C48}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DC73344A-2435-4CAA-A2B9-DADDA0AB3C48}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DC73344A-2435-4CAA-A2B9-DADDA0AB3C48}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DC73344A-2435-4CAA-A2B9-DADDA0AB3C48}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{797050ED-F544-433F-8A1C-8472513CE468} = {7BA75DCB-3CA4-4A80-A2DA-651F7ED86853}
+		{B13ABAC8-2317-412D-A1BB-7BD7E70AFEA0} = {10D07B86-C7AA-423A-8AD1-3B0E62ACF5DD}
+		{56C3F19A-CFA2-4FEB-BB97-2E116C923EFE} = {10D07B86-C7AA-423A-8AD1-3B0E62ACF5DD}
+		{6B1DABBB-D97E-4A31-89C8-D53C6C8D5149} = {EF85635B-5F1C-48C7-BEB7-2185E14AF54D}
+		{DC73344A-2435-4CAA-A2B9-DADDA0AB3C48} = {B13ABAC8-2317-412D-A1BB-7BD7E70AFEA0}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {9D3525A0-FA39-4C96-959F-5A36AC75A1FF}
+	EndGlobalSection
+EndGlobal
