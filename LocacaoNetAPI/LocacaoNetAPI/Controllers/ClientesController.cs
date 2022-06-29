@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using LocacaoNetAPI.Data.Context;
+using Microsoft.AspNetCore.Mvc;
 
 // For more information on enabling Web API for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
 
@@ -8,11 +9,21 @@ namespace LocacaoNetAPI.Controllers
     [ApiController]
     public class ClientesController : ControllerBase
     {
+        private readonly LocacaoNetAPIContext _context;
+
+        public ClientesController(LocacaoNetAPIContext context)
+        {
+            _context = context;
+        }
+
+
         // GET: api/<ClientesController>
         [HttpGet]
-        public IEnumerable<string> Get()
+        public IActionResult Get()
         {
-            return new string[] { "value1", "value2" };
+            var clientes = _context.Clientes.ToList();
+
+            return Ok(clientes);
         }
 
         // GET api/<ClientesController>/5
