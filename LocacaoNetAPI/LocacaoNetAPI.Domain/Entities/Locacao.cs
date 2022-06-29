@@ -1,4 +1,5 @@
-﻿using System;
+﻿using LocacaoNetAPI.Domain.Models;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -6,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace LocacaoNetAPI.Domain.Entities
 {
-    public class Locacao
+    public class Locacao : Entity
     {
         public int Id { get; set; }
         public Cliente Cliente { get; set; }

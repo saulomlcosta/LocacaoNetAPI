@@ -1,4 +1,6 @@
 ﻿using LocacaoNetAPI.Data.Context;
+using LocacaoNetAPI.Domain.Entities;
+using LocacaoNetAPI.Domain.Interfaces;
 using Microsoft.AspNetCore.Mvc;
 
 // For more information on enabling Web API for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
@@ -10,10 +12,12 @@ namespace LocacaoNetAPI.Controllers
     public class ClientesController : ControllerBase
     {
         private readonly LocacaoNetAPIContext _context;
+        private readonly IRepository<Cliente> _repository;
 
-        public ClientesController(LocacaoNetAPIContext context)
+        public ClientesController(LocacaoNetAPIContext context, IRepository<Cliente> repository)
         {
             _context = context;
+            _repository = repository;
         }
 
 
@@ -35,8 +39,9 @@ namespace LocacaoNetAPI.Controllers
 
         // POST api/<ClientesController>
         [HttpPost]
-        public void Post([FromBody] string value)
+        public void Post([FromBody] Cliente cliente)
         {
+            _repository.Create(cliente);
         }
 
         // PUT api/<ClientesController>/5
