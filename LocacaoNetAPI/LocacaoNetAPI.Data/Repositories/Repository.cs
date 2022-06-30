@@ -18,6 +18,11 @@ namespace LocacaoNetAPI.Data.Repositories
 
         protected readonly LocacaoNetAPIContext _context;
 
+        public Repository(LocacaoNetAPIContext context)
+        {
+            _context = context;
+        }
+
         protected DbSet<TEntity> DbSet
         {
             get
@@ -28,10 +33,7 @@ namespace LocacaoNetAPI.Data.Repositories
 
         #endregion
 
-        public Repository(LocacaoNetAPIContext context)
-        {
-            _context = context;
-        }
+      
 
         #region 'Methods: Create/Update/Remove/Save'
 
@@ -116,9 +118,8 @@ namespace LocacaoNetAPI.Data.Repositories
                 {
                     EntityEntry<TEntity> _entry = _context.Entry(model);
 
-                    DbSet.Attach(model);
-
-                    _entry.State = EntityState.Modified;
+                    DbSet.Remove(model);
+                    
                 }
                 else
                 {
@@ -265,7 +266,9 @@ namespace LocacaoNetAPI.Data.Repositories
             try
             {
                 DbSet.Add(model);
-                await SaveAsync();
+
+                await _context.SaveChangesAsync();
+
                 return model;
             }
             catch (Exception)
@@ -357,6 +360,19 @@ namespace LocacaoNetAPI.Data.Repositories
 
         #region 'Search Methods Async'
 
+        public TEntity Get(Expression<Func<TEntity, bool>> where)
+        {
+            try
+            {
+                return  DbSet.AsNoTracking().FirstOrDefault(where);
+            }
+            catch (Exception)
+            {
+
+                throw;
+            }
+        }
+
         public async Task<TEntity> GetAsync(params object[] Keys)
         {
             try
@@ -384,7 +400,6 @@ namespace LocacaoNetAPI.Data.Repositories
         }
 
         #endregion
-
 
         public void Dispose()
         {

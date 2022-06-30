@@ -687,6 +687,19 @@
         "runtime": {
           "bin/placeholder/LocacaoNetAPI.Domain.dll": {}
         }
+      },
+      "LocacaoNetAPI.Services/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v6.0",
+        "dependencies": {
+          "LocacaoNetAPI.Domain": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/LocacaoNetAPI.Services.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/LocacaoNetAPI.Services.dll": {}
+        }
       }
     }
   },
@@ -1982,11 +1995,17 @@
       "type": "project",
       "path": "../LocacaoNetAPI.Domain/LocacaoNetAPI.Domain.csproj",
       "msbuildProject": "../LocacaoNetAPI.Domain/LocacaoNetAPI.Domain.csproj"
+    },
+    "LocacaoNetAPI.Services/1.0.0": {
+      "type": "project",
+      "path": "../LocacaoNetAPI.Services/LocacaoNetAPI.Services.csproj",
+      "msbuildProject": "../LocacaoNetAPI.Services/LocacaoNetAPI.Services.csproj"
     }
   },
   "projectFileDependencyGroups": {
     "net6.0": [
       "LocacaoNetAPI.Data >= 1.0.0",
+      "LocacaoNetAPI.Services >= 1.0.0",
       "Microsoft.EntityFrameworkCore >= 6.0.6",
       "Microsoft.EntityFrameworkCore.SqlServer >= 6.0.6",
       "Swashbuckle.AspNetCore >= 6.2.3"
@@ -2021,6 +2040,9 @@
           "projectReferences": {
             "C:\\Users\\saulo\\Desktop\\LocacaoNetAPI\\LocacaoNetAPI\\LocacaoNetAPI.Data\\LocacaoNetAPI.Data.csproj": {
               "projectPath": "C:\\Users\\saulo\\Desktop\\LocacaoNetAPI\\LocacaoNetAPI\\LocacaoNetAPI.Data\\LocacaoNetAPI.Data.csproj"
+            },
+            "C:\\Users\\saulo\\Desktop\\LocacaoNetAPI\\LocacaoNetAPI\\LocacaoNetAPI.Services\\LocacaoNetAPI.Services.csproj": {
+              "projectPath": "C:\\Users\\saulo\\Desktop\\LocacaoNetAPI\\LocacaoNetAPI\\LocacaoNetAPI.Services\\LocacaoNetAPI.Services.csproj"
             }
           }
         }

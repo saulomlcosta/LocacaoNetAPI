@@ -3,7 +3,7 @@
 
 namespace LocacaoNetAPI.Domain.Interfaces
 {
-    public interface IRepository<TEntity> : IDisposable where TEntity : class
+    public interface IRepository<TEntity>  where TEntity : class
     {
         TEntity Create(TEntity model);
 
@@ -42,6 +42,8 @@ namespace LocacaoNetAPI.Domain.Interfaces
         Task<bool> DeleteAsync(params object[] Keys);
 
         Task<int> SaveAsync();
+
+        TEntity Get(Expression<Func<TEntity, bool>> where);
 
         Task<TEntity> GetAsync(params object[] Keys);
 

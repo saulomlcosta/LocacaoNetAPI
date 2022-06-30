@@ -9,6 +9,7 @@
       "LocacaoNetAPI/1.0.0": {
         "dependencies": {
           "LocacaoNetAPI.Data": "1.0.0",
+          "LocacaoNetAPI.Services": "1.0.0",
           "Microsoft.EntityFrameworkCore": "6.0.6",
           "Microsoft.EntityFrameworkCore.SqlServer": "6.0.6",
           "Swashbuckle.AspNetCore": "6.2.3"
@@ -470,6 +471,14 @@
         "runtime": {
           "LocacaoNetAPI.Domain.dll": {}
         }
+      },
+      "LocacaoNetAPI.Services/1.0.0": {
+        "dependencies": {
+          "LocacaoNetAPI.Domain": "1.0.0"
+        },
+        "runtime": {
+          "LocacaoNetAPI.Services.dll": {}
+        }
       }
     }
   },
@@ -807,6 +816,11 @@
       "sha512": ""
     },
     "LocacaoNetAPI.Domain/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "LocacaoNetAPI.Services/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""

@@ -21,6 +21,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LocacaoNetAPI.Data", "Locac
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LocacaoNetAPI.IoC", "LocacaoNetAPI.IoC\LocacaoNetAPI.IoC.csproj", "{5CA3298B-9437-4917-A29B-FE727FDD925B}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LocacaoNetAPI.Services", "LocacaoNetAPI.Services\LocacaoNetAPI.Services.csproj", "{9289E086-423A-438F-8C65-AEAD2D501608}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -43,6 +45,10 @@ Global
 		{5CA3298B-9437-4917-A29B-FE727FDD925B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{5CA3298B-9437-4917-A29B-FE727FDD925B}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{5CA3298B-9437-4917-A29B-FE727FDD925B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9289E086-423A-438F-8C65-AEAD2D501608}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9289E086-423A-438F-8C65-AEAD2D501608}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9289E086-423A-438F-8C65-AEAD2D501608}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9289E086-423A-438F-8C65-AEAD2D501608}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -54,6 +60,7 @@ Global
 		{6B1DABBB-D97E-4A31-89C8-D53C6C8D5149} = {EF85635B-5F1C-48C7-BEB7-2185E14AF54D}
 		{DC73344A-2435-4CAA-A2B9-DADDA0AB3C48} = {B13ABAC8-2317-412D-A1BB-7BD7E70AFEA0}
 		{5CA3298B-9437-4917-A29B-FE727FDD925B} = {56C3F19A-CFA2-4FEB-BB97-2E116C923EFE}
+		{9289E086-423A-438F-8C65-AEAD2D501608} = {7BA75DCB-3CA4-4A80-A2DA-651F7ED86853}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {9D3525A0-FA39-4C96-959F-5A36AC75A1FF}
