@@ -16,6 +16,8 @@ builder.Services.AddSwaggerGen();
 builder.Services.AddDbContext<LocacaoNetAPIContext>(opt => opt.UseSqlServer(builder.Configuration.GetConnectionString("DB_LOCACAO_PROD")));
 builder.Services.AddScoped(typeof(IRepository<>), typeof(Repository<>));
 builder.Services.AddScoped<IClienteService, ClienteService>();
+builder.Services.AddScoped<IFilmeService, FilmeService>();
+
 
 
 

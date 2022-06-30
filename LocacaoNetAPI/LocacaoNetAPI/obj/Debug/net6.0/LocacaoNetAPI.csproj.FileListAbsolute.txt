@@ -90,3 +90,8 @@ C:\Users\saulo\Desktop\LocacaoNetAPI\LocacaoNetAPI\LocacaoNetAPI\obj\Debug\net6.
 C:\Users\saulo\Desktop\LocacaoNetAPI\LocacaoNetAPI\LocacaoNetAPI\obj\Debug\net6.0\LocacaoNetAPI.pdb
 C:\Users\saulo\Desktop\LocacaoNetAPI\LocacaoNetAPI\LocacaoNetAPI\obj\Debug\net6.0\LocacaoNetAPI.genruntimeconfig.cache
 C:\Users\saulo\Desktop\LocacaoNetAPI\LocacaoNetAPI\LocacaoNetAPI\obj\Debug\net6.0\ref\LocacaoNetAPI.dll
+C:\Users\saulo\Desktop\LocacaoNetAPI\LocacaoNetAPI\LocacaoNetAPI\bin\Debug\net6.0\EPPlus.dll
+C:\Users\saulo\Desktop\LocacaoNetAPI\LocacaoNetAPI\LocacaoNetAPI\bin\Debug\net6.0\EPPlus.Interfaces.dll
+C:\Users\saulo\Desktop\LocacaoNetAPI\LocacaoNetAPI\LocacaoNetAPI\bin\Debug\net6.0\EPPlus.System.Drawing.dll
+C:\Users\saulo\Desktop\LocacaoNetAPI\LocacaoNetAPI\LocacaoNetAPI\bin\Debug\net6.0\Microsoft.IO.RecyclableMemoryStream.dll
+C:\Users\saulo\Desktop\LocacaoNetAPI\LocacaoNetAPI\LocacaoNetAPI\bin\Debug\net6.0\Newtonsoft.Json.dll

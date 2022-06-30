@@ -15,26 +15,21 @@ namespace LocacaoNetAPI.Controllers
     {
         private readonly IClienteService clienteService;
 
-        private readonly IRepository<Cliente> _repository;
-
-
-        public ClientesController(IClienteService clienteService, IRepository<Cliente> repository)
+        public ClientesController(IClienteService clienteService)
         {
             this.clienteService = clienteService;
-            _repository = repository;
         }
-
 
         // GET: api/<ClientesController>
         [HttpGet]
-        public async Task<ActionResult<List<Cliente>>> Get()
+        public ActionResult<List<Cliente>> Get()
         {
             return Ok(clienteService.Get());
         }
 
         // GET api/<ClientesController>/5
         [HttpGet("{id:int}")]
-        public async Task<ActionResult<Cliente>> GetById(int id)
+        public ActionResult<Cliente> GetById(int id)
         {
             return Ok(clienteService.GetById(id));
         }
@@ -50,16 +45,16 @@ namespace LocacaoNetAPI.Controllers
 
         // PUT api/<ClientesController>/5
         [HttpPut("{id}")]
-        public  IActionResult Put(int id, Cliente cliente)
+        public IActionResult Put(int id, Cliente cliente)
         {
-             clienteService.Put(id, cliente);
+            clienteService.Put(id, cliente);
             
             return NoContent();
         }
 
         // DELETE api/<ClientesController>/5
         [HttpDelete("{id:int}")]
-        public  ActionResult<Cliente> Delete(int id)
+        public ActionResult<Cliente> Delete(int id)
         {
              clienteService.Delete(id);
 
