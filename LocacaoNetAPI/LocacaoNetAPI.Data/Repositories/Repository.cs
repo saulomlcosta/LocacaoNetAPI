@@ -300,9 +300,7 @@ namespace LocacaoNetAPI.Data.Repositories
             {
                 EntityEntry<TEntity> entry = _context.Entry(model);
 
-                DbSet.Attach(model);
-
-                entry.State = EntityState.Deleted;
+                DbSet.Remove(model);
 
                 return await SaveAsync() > 0;
             }

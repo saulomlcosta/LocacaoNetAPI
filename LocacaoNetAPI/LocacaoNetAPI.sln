@@ -19,7 +19,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LocacaoNetAPI.Domain", "Loc
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LocacaoNetAPI.Data", "LocacaoNetAPI.Data\LocacaoNetAPI.Data.csproj", "{DC73344A-2435-4CAA-A2B9-DADDA0AB3C48}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LocacaoNetAPI.IoC", "LocacaoNetAPI.IoC\LocacaoNetAPI.IoC.csproj", "{5CA3298B-9437-4917-A29B-FE727FDD925B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LocacaoNetAPI.IoC", "LocacaoNetAPI.IoC\LocacaoNetAPI.IoC.csproj", "{5CA3298B-9437-4917-A29B-FE727FDD925B}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
