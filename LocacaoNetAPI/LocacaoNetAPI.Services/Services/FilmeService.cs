@@ -25,17 +25,35 @@ namespace LocacaoNetAPI.Application.Services
 
         public Filme GetById(int id)
         {
-            var filme = _repository.Get(w => w.Id == id);
+            var _filme = _repository.Get(w => w.Id == id);
 
-            if (filme == null)
+            if (_filme == null)
                 throw new Exception("Filme não encontrado");
 
-            return filme;
+            return _filme;
         }
 
         public List<Filme> Post(List<Filme> filmes)
         {
             return _repository.Create(filmes);
+        }
+
+        public bool Put(int id, Filme filme)
+        {
+            Filme _filme = _repository.Find(x => x.Id == id);
+            if (_filme == null)
+                throw new Exception("Filme não encontrado");
+
+            return _repository.Update(filme);
+        }
+
+        public bool Delete(int id)
+        {
+            Filme _filme = _repository.Find(x => x.Id == id);
+            if (_filme == null)
+                throw new Exception("Filme não encontrado");
+
+            return _repository.Delete(_filme);
         }
     }
 }

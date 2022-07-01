@@ -42,7 +42,7 @@ namespace LocacaoNetAPI.Controllers
         }
 
         // PUT api/<ClientesController>/5
-        [HttpPut("{id}")]
+        [HttpPut("{id:int}")]
         public IActionResult Put(int id, Cliente cliente)
         {
             clienteService.Put(id, cliente);

@@ -35,10 +35,10 @@ namespace LocacaoNetAPI.Controllers
         }
 
         // GET api/<FilmesController>/5
-        [HttpGet("{id}")]
-        public string Get(int id)
+        [HttpGet("{id:int}")]
+        public ActionResult<Filme> GetById(int id)
         {
-            return "value";
+            return Ok(filmeService.GetById(id));
         }
 
         // POST api/<FilmesController>
@@ -55,15 +55,12 @@ namespace LocacaoNetAPI.Controllers
 
                 using (var excelPack = new ExcelPackage(ms))
                 {
-
-                    //Lets Deal with first worksheet.(You may iterate here if dealing with multiple sheets)
                     var ws = excelPack.Workbook.Worksheets[0];
-
-                    //Get all details as DataTable -because Datatable make life easy :)
+                    // Trabalhando com DataTable, para facilitar.
                     DataTable excelasTable = new DataTable();
                     foreach (var firstRowCell in ws.Cells[1, 1, 1, ws.Dimension.End.Column])
                     {
-                        //Get colummn details
+                        //Buscando detalhe sobre a Coluna
                         if (!string.IsNullOrEmpty(firstRowCell.Text))
                         {
                             string firstColumn = string.Format("Column {0}", firstRowCell.Start.Column);
@@ -72,7 +69,7 @@ namespace LocacaoNetAPI.Controllers
                     }
 
                     var startRow = true ? 2 : 1;
-                    //Get row details
+                    //Buscando detalhe na linha
                     for (int rowNum = startRow; rowNum <= ws.Dimension.End.Row; rowNum++)
                     {
                         var wsRow = ws.Cells[rowNum, 1, rowNum, excelasTable.Columns.Count];
@@ -83,7 +80,6 @@ namespace LocacaoNetAPI.Controllers
                             row[cell.Start.Column - 1] = cell.Text;
                         }
                     }
-                    //Get everything as generics and let end user decides on casting to required type
 
                     var retornoFilmes = JsonConvert.DeserializeObject<List<Filme>>(JsonConvert.SerializeObject(excelasTable));
 
@@ -94,15 +90,21 @@ namespace LocacaoNetAPI.Controllers
         }
 
         // PUT api/<FilmesController>/5
-        [HttpPut("{id}")]
-        public void Put(int id, [FromBody] string value)
+        [HttpPut("{id:int}")]
+        public IActionResult Put(int id, Filme filme)
         {
+            filmeService.Put(id, filme);
+
+            return NoContent();
         }
 
         // DELETE api/<FilmesController>/5
-        [HttpDelete("{id}")]
-        public void Delete(int id)
+        [HttpDelete("{id:int}")]
+        public ActionResult<Filme> Delete(int id)
         {
+            filmeService.Delete(id);
+
+            return NoContent();
         }
     }
 }

@@ -23,12 +23,12 @@ namespace LocacaoNetAPI.Application.Services
     
         public Cliente GetById(int id)
         {
-            var cliente =  _repository.Get(w => w.Id == id);
+            var _cliente =  _repository.Get(w => w.Id == id);
 
-            if (cliente == null)
+            if (_cliente == null)
                 throw new Exception("Cliente não encontrado");
 
-            return cliente;
+            return _cliente;
         }
 
    
