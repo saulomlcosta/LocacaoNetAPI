@@ -20,7 +20,8 @@
 
   <ItemGroup>
     <ProjectReference Include="..\LocacaoNetAPI.Data\LocacaoNetAPI.Data.csproj" />
-    <ProjectReference Include="..\LocacaoNetAPI.Services\LocacaoNetAPI.Services.csproj" />
+    <ProjectReference Include="..\LocacaoNetAPI.IoC\LocacaoNetAPI.IoC.csproj" />
+    <ProjectReference Include="..\LocacaoNetAPI.Services\LocacaoNetAPI.Application.csproj" />
   </ItemGroup>
 
 </Project>

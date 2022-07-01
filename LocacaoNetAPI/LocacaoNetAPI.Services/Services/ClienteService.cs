@@ -1,9 +1,9 @@
 ﻿using LocacaoNetAPI.Domain.Entities;
 using LocacaoNetAPI.Domain.Interfaces;
-using LocacaoNetAPI.Services.Interfaces;
+using LocacaoNetAPI.Application.Interfaces;
 
 
-namespace LocacaoNetAPI.Services.Services
+namespace LocacaoNetAPI.Application.Services
 {
     public class ClienteService : IClienteService
     {

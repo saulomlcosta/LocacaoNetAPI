@@ -1,5 +1,5 @@
-﻿using LocacaoNetAPI.Domain.Entities;
-using LocacaoNetAPI.Services.Interfaces;
+﻿using LocacaoNetAPI.Application.Interfaces;
+using LocacaoNetAPI.Domain.Entities;
 using Microsoft.AspNetCore.Mvc;
 using Newtonsoft.Json;
 using OfficeOpenXml;
@@ -48,7 +48,6 @@ namespace LocacaoNetAPI.Controllers
             ExcelPackage.LicenseContext = LicenseContext.NonCommercial;
 
             IFormFile file = formFile.File;
-
 
             using (var ms = new MemoryStream())
             {

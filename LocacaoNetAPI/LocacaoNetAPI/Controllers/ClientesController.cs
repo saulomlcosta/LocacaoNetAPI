@@ -1,7 +1,5 @@
-﻿using LocacaoNetAPI.Data.Context;
+﻿using LocacaoNetAPI.Application.Interfaces;
 using LocacaoNetAPI.Domain.Entities;
-using LocacaoNetAPI.Domain.Interfaces;
-using LocacaoNetAPI.Services.Interfaces;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 
@@ -56,7 +54,7 @@ namespace LocacaoNetAPI.Controllers
         [HttpDelete("{id:int}")]
         public ActionResult<Cliente> Delete(int id)
         {
-             clienteService.Delete(id);
+            clienteService.Delete(id);
 
             return NoContent();
         }

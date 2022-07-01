@@ -10,4 +10,10 @@
     <PackageReference Include="Microsoft.Extensions.DependencyInjection" Version="6.0.0" />
   </ItemGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\LocacaoNetAPI.Data\LocacaoNetAPI.Data.csproj" />
+    <ProjectReference Include="..\LocacaoNetAPI.Domain\LocacaoNetAPI.Domain.csproj" />
+    <ProjectReference Include="..\LocacaoNetAPI.Services\LocacaoNetAPI.Application.csproj" />
+  </ItemGroup>
+
 </Project>

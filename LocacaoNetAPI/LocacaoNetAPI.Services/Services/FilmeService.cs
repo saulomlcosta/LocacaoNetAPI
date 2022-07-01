@@ -1,13 +1,13 @@
 ﻿using LocacaoNetAPI.Domain.Entities;
 using LocacaoNetAPI.Domain.Interfaces;
-using LocacaoNetAPI.Services.Interfaces;
+using LocacaoNetAPI.Application.Interfaces;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace LocacaoNetAPI.Services.Services
+namespace LocacaoNetAPI.Application.Services
 {
     public class FilmeService : IFilmeService
     {

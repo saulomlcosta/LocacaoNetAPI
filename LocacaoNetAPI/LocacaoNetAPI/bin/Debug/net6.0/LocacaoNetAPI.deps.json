@@ -9,8 +9,9 @@
       "LocacaoNetAPI/1.0.0": {
         "dependencies": {
           "EPPlus": "6.0.5",
+          "LocacaoNetAPI.Application": "1.0.0",
           "LocacaoNetAPI.Data": "1.0.0",
-          "LocacaoNetAPI.Services": "1.0.0",
+          "LocacaoNetAPI.IoC": "1.0.0",
           "Microsoft.EntityFrameworkCore": "6.0.6",
           "Microsoft.EntityFrameworkCore.SqlServer": "6.0.6",
           "Newtonsoft.Json": "13.0.1",
@@ -557,6 +558,14 @@
           }
         }
       },
+      "LocacaoNetAPI.Application/1.0.0": {
+        "dependencies": {
+          "LocacaoNetAPI.Domain": "1.0.0"
+        },
+        "runtime": {
+          "LocacaoNetAPI.Application.dll": {}
+        }
+      },
       "LocacaoNetAPI.Data/1.0.0": {
         "dependencies": {
           "LocacaoNetAPI.Domain": "1.0.0",
@@ -572,12 +581,15 @@
           "LocacaoNetAPI.Domain.dll": {}
         }
       },
-      "LocacaoNetAPI.Services/1.0.0": {
+      "LocacaoNetAPI.IoC/1.0.0": {
         "dependencies": {
-          "LocacaoNetAPI.Domain": "1.0.0"
+          "LocacaoNetAPI.Application": "1.0.0",
+          "LocacaoNetAPI.Data": "1.0.0",
+          "LocacaoNetAPI.Domain": "1.0.0",
+          "Microsoft.Extensions.DependencyInjection": "6.0.0"
         },
         "runtime": {
-          "LocacaoNetAPI.Services.dll": {}
+          "LocacaoNetAPI.IoC.dll": {}
         }
       }
     }
@@ -1001,6 +1013,11 @@
       "path": "system.windows.extensions/4.7.0",
       "hashPath": "system.windows.extensions.4.7.0.nupkg.sha512"
     },
+    "LocacaoNetAPI.Application/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
     "LocacaoNetAPI.Data/1.0.0": {
       "type": "project",
       "serviceable": false,
@@ -1011,7 +1028,7 @@
       "serviceable": false,
       "sha512": ""
     },
-    "LocacaoNetAPI.Services/1.0.0": {
+    "LocacaoNetAPI.IoC/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""

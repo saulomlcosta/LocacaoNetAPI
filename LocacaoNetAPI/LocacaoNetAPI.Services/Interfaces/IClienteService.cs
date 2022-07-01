@@ -5,7 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace LocacaoNetAPI.Services.Interfaces
+namespace LocacaoNetAPI.Application.Interfaces
 {
     public interface IClienteService
     {
