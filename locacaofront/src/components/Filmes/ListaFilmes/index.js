@@ -2,8 +2,7 @@ import React from 'react';
 import Button from 'react-bootstrap/Button';
 import Table from 'react-bootstrap/Table';
 
-
-export default function Clientes() {
+export default function Filmes() {
     return (
         <>
             <div>
@@ -11,7 +10,7 @@ export default function Clientes() {
             </div>
 
             <div>
-                <Button className="mb-3" href="/clientes/novo">Criar Novo Cliente</Button>
+                <Button className="mb-3" href="/filmes/novo">Adicionar Novos Filmes</Button>
             </div>
 
             <div>
@@ -19,9 +18,9 @@ export default function Clientes() {
                     <thead>
                         <tr>
                             <th>#</th>
-                            <th>Nome</th>
-                            <th>CPF</th>
-                            <th>Email</th>
+                            <th>Título</th>
+                            <th>Classificação</th>
+                            <th>Lançamento</th>
                         </tr>
                     </thead>
                     <tbody>

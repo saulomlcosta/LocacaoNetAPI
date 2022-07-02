@@ -2,16 +2,19 @@ import React from 'react';
 import Button from 'react-bootstrap/Button';
 import Table from 'react-bootstrap/Table';
 
-
-export default function Clientes() {
+export default function Locacoes() {
     return (
         <>
             <div>
-                <Button className="mb-3 mr-3" href="/">Voltar</Button>
+                <Button className="mb-3" href="/clientes/">Clientes</Button>
             </div>
 
             <div>
-                <Button className="mb-3" href="/clientes/novo">Criar Novo Cliente</Button>
+                <Button className="mb-3" href="/filmes/">Filmes</Button>
+            </div>
+
+            <div>
+                <Button className="mb-3" href="/locacao/novo">Criar Nova Locação</Button>
             </div>
 
             <div>
@@ -19,9 +22,10 @@ export default function Clientes() {
                     <thead>
                         <tr>
                             <th>#</th>
-                            <th>Nome</th>
-                            <th>CPF</th>
-                            <th>Email</th>
+                            <th>Cliente</th>
+                            <th>Filme</th>
+                            <th>Data de Locação</th>
+                            <th>Data de Devolução</th>
                         </tr>
                     </thead>
                     <tbody>
@@ -30,12 +34,21 @@ export default function Clientes() {
                             <td>Mark</td>
                             <td>Otto</td>
                             <td>@mdo</td>
+                            <td>@mdo</td>
+
                         </tr>
                         <tr>
                             <td>2</td>
                             <td>Jacob</td>
                             <td>Thornton</td>
                             <td>@fat</td>
+                            <td>@fat</td>
+
+                        </tr>
+                        <tr>
+                            <td>3</td>
+                            <td colSpan={2}>Larry the Bird</td>
+                            <td>@twitter</td>
                         </tr>
                         <tr>
                             <td>3</td>
