@@ -8,6 +8,7 @@ namespace LocacaoNetAPI.Application.DTO
 {
     public class LocacaoDTO
     {
+        public int Id { get; set; }
         public int Id_Cliente { get; set; }
         public int Id_Filme { get; set; }
         public DateTime DataLocacao { get; set; }

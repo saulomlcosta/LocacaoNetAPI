@@ -12,8 +12,7 @@ namespace LocacaoNetAPI.Application.Interfaces
     {
         Locacao GetById(int id);
         Locacao Post(LocacaoDTO locacaoDTO);
-        //List<Filme> Post(List<Filme> filmes);
-        //bool Put(int id, Filme filme);
-        //bool Delete(int id);
+        bool Put(LocacaoDTO locacaoDTO);
+        bool Delete(int id);  
     }
 }

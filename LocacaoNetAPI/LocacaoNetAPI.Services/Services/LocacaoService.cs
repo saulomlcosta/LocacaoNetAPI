@@ -39,5 +39,25 @@ namespace LocacaoNetAPI.Application.Services
 
             return _repository.Create(_locacao);
         }
+
+        public bool Put(LocacaoDTO locacaoDTO)
+        {
+            Locacao _locacao = _repository.Find(x => x.Id == locacaoDTO.Id);
+            if (_locacao == null)
+                throw new Exception("Locação não encontrada");
+
+            _locacao = mapper.Map<Locacao>(locacaoDTO);
+
+            return _repository.Update(_locacao);
+        }
+
+        public bool Delete(int id)
+        {
+            Locacao _locacao = _repository.Find(x => x.Id == id);
+            if (_locacao == null)
+                throw new Exception("Filme não encontrado");
+
+            return _repository.Delete(_locacao);
+        }
     }
 }

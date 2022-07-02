@@ -42,15 +42,21 @@ namespace LocacaoNetAPI.Controllers
         }
 
         // PUT api/<LocacoesController>/5
-        [HttpPut("{id}")]
-        public void Put(int id, [FromBody] string value)
+        [HttpPut("{id:int}")]
+        public IActionResult Put(LocacaoDTO locacaoDTO)
         {
+            locacaoService.Put(locacaoDTO);
+
+            return NoContent();
         }
 
         // DELETE api/<LocacoesController>/5
-        [HttpDelete("{id}")]
-        public void Delete(int id)
+        [HttpDelete("{id:int}")]
+        public ActionResult<Locacao> Delete(int id)
         {
+            locacaoService.Delete(id);
+
+            return NoContent();
         }
     }
 }
