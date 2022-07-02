@@ -23,6 +23,13 @@ namespace LocacaoNetAPI.Application.Services
             this.mapper = mapper;
         }
 
+        public List<Locacao> Get()
+        {
+            List<Locacao> _locacoes = _repository.GetAll();          
+
+            return _locacoes;
+        }
+
         public Locacao GetById(int id)
         {
             var _locacao = _repository.GetById(id);

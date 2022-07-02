@@ -10,6 +10,7 @@ namespace LocacaoNetAPI.Domain.Interfaces
     public interface ILocacaoRepository : IRepository<Locacao>
     {
         Locacao GetById(int id);
+        List<Locacao> GetAll();
     }
     
 }

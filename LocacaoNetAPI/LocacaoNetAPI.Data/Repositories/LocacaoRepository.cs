@@ -15,6 +15,17 @@ namespace LocacaoNetAPI.Data.Repositories
         public LocacaoRepository(LocacaoNetAPIContext context) : base(context)
         {
         }
+        
+        public List<Locacao> GetAll()
+        {
+            var locacao = _context
+                .Locacoes
+                .Include(f => f.Filme)
+                .Include(c => c.Cliente)
+                .ToList();
+
+            return locacao;
+        }
 
         public Locacao GetById(int id)
         {

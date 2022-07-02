@@ -20,9 +20,9 @@ namespace LocacaoNetAPI.Controllers
 
         // GET: api/<LocacoesController>
         [HttpGet]
-        public IEnumerable<string> Get()
+        public IEnumerable<Locacao> Get()
         {
-            return new string[] { "value1", "value2" };
+            return locacaoService.Get();
         }
 
         // GET api/<LocacoesController>/5
