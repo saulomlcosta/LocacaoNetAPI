@@ -2,6 +2,31 @@
   "version": 3,
   "targets": {
     "net6.0": {
+      "AutoMapper/11.0.1": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.CSharp": "4.7.0"
+        },
+        "compile": {
+          "lib/netstandard2.1/AutoMapper.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.1/AutoMapper.dll": {}
+        }
+      },
+      "AutoMapper.Extensions.Microsoft.DependencyInjection/11.0.0": {
+        "type": "package",
+        "dependencies": {
+          "AutoMapper": "11.0.0",
+          "Microsoft.Extensions.Options": "6.0.0"
+        },
+        "compile": {
+          "lib/netstandard2.1/AutoMapper.Extensions.Microsoft.DependencyInjection.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.1/AutoMapper.Extensions.Microsoft.DependencyInjection.dll": {}
+        }
+      },
       "EPPlus/6.0.5": {
         "type": "package",
         "dependencies": {
@@ -41,7 +66,7 @@
           "lib/net6.0/EPPlus.System.Drawing.dll": {}
         }
       },
-      "Microsoft.CSharp/4.5.0": {
+      "Microsoft.CSharp/4.7.0": {
         "type": "package",
         "compile": {
           "ref/netcoreapp2.0/_._": {}
@@ -833,6 +858,8 @@
         "type": "project",
         "framework": ".NETCoreApp,Version=v6.0",
         "dependencies": {
+          "AutoMapper": "11.0.1",
+          "AutoMapper.Extensions.Microsoft.DependencyInjection": "11.0.0",
           "LocacaoNetAPI.Domain": "1.0.0"
         },
         "compile": {
@@ -866,26 +893,39 @@
         "runtime": {
           "bin/placeholder/LocacaoNetAPI.Domain.dll": {}
         }
-      },
-      "LocacaoNetAPI.IoC/1.0.0": {
-        "type": "project",
-        "framework": ".NETCoreApp,Version=v6.0",
-        "dependencies": {
-          "LocacaoNetAPI.Application": "1.0.0",
-          "LocacaoNetAPI.Data": "1.0.0",
-          "LocacaoNetAPI.Domain": "1.0.0",
-          "Microsoft.Extensions.DependencyInjection": "6.0.0"
-        },
-        "compile": {
-          "bin/placeholder/LocacaoNetAPI.IoC.dll": {}
-        },
-        "runtime": {
-          "bin/placeholder/LocacaoNetAPI.IoC.dll": {}
-        }
       }
     }
   },
   "libraries": {
+    "AutoMapper/11.0.1": {
+      "sha512": "WIadGC1pIwbnyTubvI577p3F++Bsj9q2Q3OaAc1I0QS+JhupN1xkdrPBhI9bPIeg63zM81tZplUNYkqU1HE5jQ==",
+      "type": "package",
+      "path": "automapper/11.0.1",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "README.md",
+        "automapper.11.0.1.nupkg.sha512",
+        "automapper.nuspec",
+        "icon.png",
+        "lib/netstandard2.1/AutoMapper.dll",
+        "lib/netstandard2.1/AutoMapper.xml"
+      ]
+    },
+    "AutoMapper.Extensions.Microsoft.DependencyInjection/11.0.0": {
+      "sha512": "0asw5WxdCFh2OTi9Gv+oKyH9SzxwYQSnO8TV5Dd0GggovILzJW4UimP26JAcxc3yB5NnC5urooZ1BBs8ElpiBw==",
+      "type": "package",
+      "path": "automapper.extensions.microsoft.dependencyinjection/11.0.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "README.md",
+        "automapper.extensions.microsoft.dependencyinjection.11.0.0.nupkg.sha512",
+        "automapper.extensions.microsoft.dependencyinjection.nuspec",
+        "icon.png",
+        "lib/netstandard2.1/AutoMapper.Extensions.Microsoft.DependencyInjection.dll"
+      ]
+    },
     "EPPlus/6.0.5": {
       "sha512": "q6hZICsuIi/j5+1e5NxUl05R4T0eAg7BSE4JZVz9WxONpNLZz58uYx3Q88iR00LSXq9VgPhQfQ7B8q55+V76wA==",
       "type": "package",
@@ -952,10 +992,10 @@
         "readme.md"
       ]
     },
-    "Microsoft.CSharp/4.5.0": {
-      "sha512": "kaj6Wb4qoMuH3HySFJhxwQfe8R/sJsNJnANrvv8WdFPMoNbKY5htfNscv+LHCu5ipz+49m2e+WQXpLXr9XYemQ==",
+    "Microsoft.CSharp/4.7.0": {
+      "sha512": "pTj+D3uJWyN3My70i2Hqo+OXixq3Os2D1nJ2x92FFo6sk8fYS1m1WLNTs0Dc1uPaViH0YvEEwvzddQ7y4rhXmA==",
       "type": "package",
-      "path": "microsoft.csharp/4.5.0",
+      "path": "microsoft.csharp/4.7.0",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
@@ -968,6 +1008,7 @@
         "lib/netcoreapp2.0/_._",
         "lib/netstandard1.3/Microsoft.CSharp.dll",
         "lib/netstandard2.0/Microsoft.CSharp.dll",
+        "lib/netstandard2.0/Microsoft.CSharp.xml",
         "lib/portable-net45+win8+wp8+wpa81/_._",
         "lib/uap10.0.16299/_._",
         "lib/win8/_._",
@@ -977,7 +1018,7 @@
         "lib/xamarinmac20/_._",
         "lib/xamarintvos10/_._",
         "lib/xamarinwatchos10/_._",
-        "microsoft.csharp.4.5.0.nupkg.sha512",
+        "microsoft.csharp.4.7.0.nupkg.sha512",
         "microsoft.csharp.nuspec",
         "ref/MonoAndroid10/_._",
         "ref/MonoTouch10/_._",
@@ -2510,19 +2551,15 @@
       "type": "project",
       "path": "../LocacaoNetAPI.Domain/LocacaoNetAPI.Domain.csproj",
       "msbuildProject": "../LocacaoNetAPI.Domain/LocacaoNetAPI.Domain.csproj"
-    },
-    "LocacaoNetAPI.IoC/1.0.0": {
-      "type": "project",
-      "path": "../LocacaoNetAPI.IoC/LocacaoNetAPI.IoC.csproj",
-      "msbuildProject": "../LocacaoNetAPI.IoC/LocacaoNetAPI.IoC.csproj"
     }
   },
   "projectFileDependencyGroups": {
     "net6.0": [
+      "AutoMapper >= 11.0.1",
+      "AutoMapper.Extensions.Microsoft.DependencyInjection >= 11.0.0",
       "EPPlus >= 6.0.5",
       "LocacaoNetAPI.Application >= 1.0.0",
       "LocacaoNetAPI.Data >= 1.0.0",
-      "LocacaoNetAPI.IoC >= 1.0.0",
       "Microsoft.EntityFrameworkCore >= 6.0.6",
       "Microsoft.EntityFrameworkCore.SqlServer >= 6.0.6",
       "Newtonsoft.Json >= 13.0.1",
@@ -2530,19 +2567,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\saulo.lima\\.nuget\\packages\\": {}
+    "C:\\Users\\saulo\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Labs\\LocacaoNetAPI\\LocacaoNetAPI\\LocacaoNetAPI\\LocacaoNetAPI.csproj",
+      "projectUniqueName": "C:\\@Projetos\\LocacaoNetAPI\\LocacaoNetAPI\\LocacaoNetAPI\\LocacaoNetAPI.csproj",
       "projectName": "LocacaoNetAPI",
-      "projectPath": "C:\\Labs\\LocacaoNetAPI\\LocacaoNetAPI\\LocacaoNetAPI\\LocacaoNetAPI.csproj",
-      "packagesPath": "C:\\Users\\saulo.lima\\.nuget\\packages\\",
-      "outputPath": "C:\\Labs\\LocacaoNetAPI\\LocacaoNetAPI\\LocacaoNetAPI\\obj\\",
+      "projectPath": "C:\\@Projetos\\LocacaoNetAPI\\LocacaoNetAPI\\LocacaoNetAPI\\LocacaoNetAPI.csproj",
+      "packagesPath": "C:\\Users\\saulo\\.nuget\\packages\\",
+      "outputPath": "C:\\@Projetos\\LocacaoNetAPI\\LocacaoNetAPI\\LocacaoNetAPI\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\saulo.lima\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\saulo\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -2556,14 +2593,11 @@
         "net6.0": {
           "targetAlias": "net6.0",
           "projectReferences": {
-            "C:\\Labs\\LocacaoNetAPI\\LocacaoNetAPI\\LocacaoNetAPI.Data\\LocacaoNetAPI.Data.csproj": {
-              "projectPath": "C:\\Labs\\LocacaoNetAPI\\LocacaoNetAPI\\LocacaoNetAPI.Data\\LocacaoNetAPI.Data.csproj"
+            "C:\\@Projetos\\LocacaoNetAPI\\LocacaoNetAPI\\LocacaoNetAPI.Data\\LocacaoNetAPI.Data.csproj": {
+              "projectPath": "C:\\@Projetos\\LocacaoNetAPI\\LocacaoNetAPI\\LocacaoNetAPI.Data\\LocacaoNetAPI.Data.csproj"
             },
-            "C:\\Labs\\LocacaoNetAPI\\LocacaoNetAPI\\LocacaoNetAPI.IoC\\LocacaoNetAPI.IoC.csproj": {
-              "projectPath": "C:\\Labs\\LocacaoNetAPI\\LocacaoNetAPI\\LocacaoNetAPI.IoC\\LocacaoNetAPI.IoC.csproj"
-            },
-            "C:\\Labs\\LocacaoNetAPI\\LocacaoNetAPI\\LocacaoNetAPI.Services\\LocacaoNetAPI.Application.csproj": {
-              "projectPath": "C:\\Labs\\LocacaoNetAPI\\LocacaoNetAPI\\LocacaoNetAPI.Services\\LocacaoNetAPI.Application.csproj"
+            "C:\\@Projetos\\LocacaoNetAPI\\LocacaoNetAPI\\LocacaoNetAPI.Services\\LocacaoNetAPI.Application.csproj": {
+              "projectPath": "C:\\@Projetos\\LocacaoNetAPI\\LocacaoNetAPI\\LocacaoNetAPI.Services\\LocacaoNetAPI.Application.csproj"
             }
           }
         }
@@ -2578,6 +2612,14 @@
       "net6.0": {
         "targetAlias": "net6.0",
         "dependencies": {
+          "AutoMapper": {
+            "target": "Package",
+            "version": "[11.0.1, )"
+          },
+          "AutoMapper.Extensions.Microsoft.DependencyInjection": {
+            "target": "Package",
+            "version": "[11.0.0, )"
+          },
           "EPPlus": {
             "target": "Package",
             "version": "[6.0.5, )"

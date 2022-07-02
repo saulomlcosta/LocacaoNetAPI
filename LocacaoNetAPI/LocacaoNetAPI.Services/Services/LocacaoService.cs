@@ -1,4 +1,6 @@
-﻿using LocacaoNetAPI.Application.Interfaces;
+﻿using AutoMapper;
+using LocacaoNetAPI.Application.DTO;
+using LocacaoNetAPI.Application.Interfaces;
 using LocacaoNetAPI.Domain.Entities;
 using LocacaoNetAPI.Domain.Interfaces;
 using System;
@@ -11,21 +13,31 @@ namespace LocacaoNetAPI.Application.Services
 {
     public class LocacaoService : ILocacaoService
     {
-        private readonly IRepository<Locacao> _repository;
+        private readonly ILocacaoRepository _repository;
+        private readonly IMapper mapper;
 
-        public LocacaoService(IRepository<Locacao> repository)
+
+        public LocacaoService(ILocacaoRepository repository, IMapper mapper)
         {
             _repository = repository;
+            this.mapper = mapper;
         }
 
         public Locacao GetById(int id)
         {
-            var _locacao = _repository.Get(w => w.Id == id);
+            var _locacao = _repository.GetById(id);
 
             if (_locacao == null)
                 throw new Exception("Locação não encontrada");
 
             return _locacao;
+        }
+
+        public Locacao Post(LocacaoDTO locacaoDTO)
+        {
+            Locacao _locacao = mapper.Map<Locacao>(locacaoDTO);
+
+            return _repository.Create(_locacao);
         }
     }
 }

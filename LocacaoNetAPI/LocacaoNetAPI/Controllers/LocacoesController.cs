@@ -1,4 +1,7 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using LocacaoNetAPI.Application.DTO;
+using LocacaoNetAPI.Application.Interfaces;
+using LocacaoNetAPI.Domain.Entities;
+using Microsoft.AspNetCore.Mvc;
 
 // For more information on enabling Web API for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
 
@@ -8,6 +11,13 @@ namespace LocacaoNetAPI.Controllers
     [ApiController]
     public class LocacoesController : ControllerBase
     {
+        private readonly ILocacaoService locacaoService;
+
+        public LocacoesController(ILocacaoService locacaoService)
+        {
+            this.locacaoService = locacaoService;
+        }
+
         // GET: api/<LocacoesController>
         [HttpGet]
         public IEnumerable<string> Get()
@@ -16,16 +26,19 @@ namespace LocacaoNetAPI.Controllers
         }
 
         // GET api/<LocacoesController>/5
-        [HttpGet("{id}")]
-        public string Get(int id)
+        [HttpGet("{id:int}")]
+        public ActionResult<Locacao> GetById(int id)
         {
-            return "value";
+            return Ok(locacaoService.GetById(id));
         }
 
         // POST api/<LocacoesController>
         [HttpPost]
-        public void Post([FromBody] string value)
+        public IActionResult Post([FromBody] LocacaoDTO locacaoDTO)
         {
+            var entity = locacaoService.Post(locacaoDTO);
+
+            return CreatedAtAction(nameof(GetById), new { id = entity.Id }, entity);
         }
 
         // PUT api/<LocacoesController>/5
