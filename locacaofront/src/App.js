@@ -1,8 +1,8 @@
 import React from 'react';
-import Locacoes from './components/Locacoes';
+import Routes from './routes/routes';
 
 export default function App() {
-  return (<Locacoes />
+  return (<Routes />
   );
 }
 
