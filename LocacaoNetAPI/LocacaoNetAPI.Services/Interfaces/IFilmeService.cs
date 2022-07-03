@@ -9,6 +9,7 @@ namespace LocacaoNetAPI.Application.Interfaces
 {
     public interface IFilmeService
     {
+        List<Filme> Get();
         Filme GetById(int id);
         List<Filme> Post(List<Filme> filmes);
         bool Put(int id, Filme filme);

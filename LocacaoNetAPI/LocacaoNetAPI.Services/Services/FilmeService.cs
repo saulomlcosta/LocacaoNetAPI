@@ -20,7 +20,9 @@ namespace LocacaoNetAPI.Application.Services
 
         public List<Filme> Get()
         {
-            throw new NotImplementedException();
+            List<Filme> _filmes = _repository.GetAll();
+
+            return _filmes;
         }
 
         public Filme GetById(int id)
