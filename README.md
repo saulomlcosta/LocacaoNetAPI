@@ -36,6 +36,9 @@ $ Após rodar a aplicação, terá acesso a documentação Swagger com os Endpoi
 $ No appsettings.json segue as configurações que foram usadas.
 $ No appsettings.json segue as configurações que foram usadas.
 $ (Logo irei configurar o docker-compose no Repositório para evitar essa seção.)
+
+# EndPoint de Filmes
+$ Para inserir filmes no POST, é necessário enviar um arquivo xlsx.
 ```
 
 ### Frontend - React
