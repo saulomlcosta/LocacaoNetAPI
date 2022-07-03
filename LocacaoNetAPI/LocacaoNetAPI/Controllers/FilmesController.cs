@@ -29,9 +29,9 @@ namespace LocacaoNetAPI.Controllers
 
         // GET: api/<FilmesController>
         [HttpGet]
-        public IEnumerable<string> Get()
+        public ActionResult<List<Filme>> Get()
         {
-            return new string[] { "value1", "value2" };
+            return filmeService.Get();
         }
 
         // GET api/<FilmesController>/5

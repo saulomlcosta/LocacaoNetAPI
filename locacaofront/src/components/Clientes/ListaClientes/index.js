@@ -1,8 +1,9 @@
 import React, { useEffect, useState } from 'react';
 import { useNavigate, Link } from 'react-router-dom';
-import Button from 'react-bootstrap/Button';
-import Table from 'react-bootstrap/Table';
+import { Button, Table, Container, Row, Col } from 'react-bootstrap';
 import { Modal } from 'react-bootstrap';
+import { FiEdit, FiUserX } from 'react-icons/fi'
+
 
 import api from '../../../services/api';
 
@@ -16,7 +17,18 @@ export default function Clientes() {
     const fecharModal = () => setModal(false);
 
 
-    const navigate = useNavigate();
+    const navigate = useNavigate()
+
+    async function carregarClientes() {
+        try {
+            var response = await api.get(`api/clientes`);
+
+            setClientes(response.data);
+            carregarClientes();
+        } catch (error) {
+            alert('Não foi possível carregar os clientes');
+        }
+    }
 
     async function editarCliente(id) {
         try {
@@ -25,7 +37,6 @@ export default function Clientes() {
             alert('Não foi possível ir para tela de edição');
         }
     }
-
 
     async function excluirCliente(id) {
         try {
@@ -44,30 +55,24 @@ export default function Clientes() {
 
 
     useEffect(() => {
-        api.get(`api/clientes`).then(
-            response => { setClientes(response.data) }
-        )
-    }, [excluirCliente])
+        carregarClientes();
+    }, [])
 
 
     return (
         <>
-            <div>
-                <Button className="mb-3 mr-3" href="/">Voltar</Button>
-            </div>
-
-            <div>
-                <Button className="mb-3" href="/clientes/novo/0">Criar Novo Cliente</Button>
-            </div>
-
-            <div>
+            <Container>
+                <Row>
+                    <Col><Button className="mb-3 mr-3" href="/">Voltar</Button></Col>
+                    <Col><Button className="mb-3" href="/clientes/novo/0">Criar Novo Cliente</Button></Col>
+                </Row>
                 <Table striped bordered hover>
                     <thead>
                         <tr>
                             <th>Nome</th>
                             <th>CPF</th>
-                            <th>Editar</th>
-                            <th>Excluir</th>
+                            <th></th>
+                            <th></th>
                         </tr>
                     </thead>
                     <tbody>
@@ -76,27 +81,30 @@ export default function Clientes() {
                             <tr>
                                 <td>{cliente.nome}</td>
                                 <td>{cliente.cpf}</td>
-                                <td><Button variant="info" onClick={() => editarCliente(cliente.id)}>Editar</Button>
+                                <td><Button variant="info" onClick={() => editarCliente(cliente.id)}>
+                                    <FiEdit size={25} color="#17202a" />
+                                </Button>
                                 </td>
-                                <td><Button variant="danger" onClick={() => selecionarCliente(cliente)}>Excluir</Button>
+                                <td><Button variant="danger" onClick={() => selecionarCliente(cliente)}>
+                                    <FiUserX size={25} color="#17202a" />
+                                </Button>
                                 </td>
                             </tr>
                         ))}
                     </tbody>
                 </Table>
-            </div>
-
-            <Modal show={modal} onHide={fecharModal}>
-                <Modal.Body>Você confirma a exclusão deste(a) cliente? : {clienteSelecionado && clienteSelecionado.nome}</Modal.Body>
-                <Modal.Footer>
-                    <Button variant="secondary" onClick={fecharModal}>
-                        Não
-                    </Button>
-                    <Button variant="primary" onClick={() => excluirCliente(clienteSelecionado.id)}>
-                        Sim
-                    </Button>
-                </Modal.Footer>
-            </Modal>
+                <Modal show={modal} onHide={fecharModal}>
+                    <Modal.Body>Você confirma a exclusão deste(a) cliente? : {clienteSelecionado && clienteSelecionado.nome}</Modal.Body>
+                    <Modal.Footer>
+                        <Button variant="secondary" onClick={fecharModal}>
+                            Não
+                        </Button>
+                        <Button variant="primary" onClick={() => excluirCliente(clienteSelecionado.id)}>
+                            Sim
+                        </Button>
+                    </Modal.Footer>
+                </Modal>
+            </Container>
         </>
     )
 }

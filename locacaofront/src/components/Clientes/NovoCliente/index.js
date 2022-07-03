@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import Button from 'react-bootstrap/Button';
+import { Button, Container, Row, Col } from 'react-bootstrap';
 import Form from 'react-bootstrap/Form';
 import { Link, useNavigate, useParams } from 'react-router-dom';
 import api from '../../../services/api';
@@ -62,46 +62,60 @@ export default function NovoCliente() {
 
     return (
         <>
-            <div>
-                <Button className="mb-3" href="/clientes">Voltar</Button>
-            </div>
+            <Container>
+                <Row>
+                    <Col><Button className="mb-3" href="/clientes">Voltar</Button></Col>
+                </Row>
+            </Container>
 
-            <div>
+            <Container>
                 <Form onSubmit={handleChange}>
-                    <Form.Group className="mb-3" controlId="name">
-                        <Form.Label>Nome</Form.Label>
-                        <Form.Control
-                            value={nome}
-                            onChange={e => setNome(e.target.value)}
-                            type="text"
-                            placeholder="Nome" />
-                    </Form.Group>
-
-                    <Form.Group className="mb-3" controlId="cpf">
-                        <Form.Label>CPF</Form.Label>
-                        <Form.Control
-                            value={cpf}
-                            onChange={e => setCPF(e.target.value)}
-                            type="text"
-                            placeholder="CPF" />
-                    </Form.Group>
-
-                    <Form.Group className="mb-3" controlId="dataNascimento">
-                        <Form.Label>Data de Nascimento</Form.Label>
-                        <Form.Control
-                            value={dataNascimento}
-                            onChange={e => setDataNascimento(e.target.value)}
-                            type="date"
-                            name="dataNascimento"
-                            placeholder="Data de Nascimento" />
-                    </Form.Group>
-
-                    <Button variant="primary" type="submit">
-                        Submit
-                    </Button>
+                    <Row>
+                        <Col xs lg="4">
+                            <Form.Group className="mb-3" controlId="name">
+                                <Form.Label>Nome</Form.Label>
+                                <Form.Control
+                                    value={nome}
+                                    onChange={e => setNome(e.target.value)}
+                                    type="text"
+                                    placeholder="Nome" />
+                            </Form.Group>
+                        </Col>
+                    </Row>
+                    <Row>
+                        <Col xs lg="4">
+                            <Form.Group className="mb-3" controlId="cpf">
+                                <Form.Label>CPF</Form.Label>
+                                <Form.Control
+                                    value={cpf}
+                                    onChange={e => setCPF(e.target.value)}
+                                    type="text"
+                                    placeholder="CPF" />
+                            </Form.Group>
+                        </Col>
+                    </Row>
+                    <Row>
+                        <Col xs lg="2">
+                            <Form.Group className="mb-3" controlId="dataNascimento">
+                                <Form.Label>Data de Nascimento</Form.Label>
+                                <Form.Control
+                                    value={dataNascimento}
+                                    onChange={e => setDataNascimento(e.target.value)}
+                                    type="date"
+                                    name="dataNascimento"
+                                    placeholder="Data de Nascimento" />
+                            </Form.Group>
+                        </Col>
+                    </Row>
+                    <Row>
+                        <Col>
+                            <Button variant="primary" type="submit">
+                                Submit
+                            </Button>
+                        </Col>
+                    </Row>
                 </Form>
-            </div>
-
+            </Container>
         </>
     )
 }

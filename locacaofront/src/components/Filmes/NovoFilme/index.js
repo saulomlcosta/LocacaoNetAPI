@@ -1,27 +1,36 @@
-import React from 'react';
-import Button from 'react-bootstrap/Button';
+import React, { useEffect, useState } from 'react';
+import { Button, Container, Row, Col } from 'react-bootstrap';
 import Form from 'react-bootstrap/Form';
+import { Link, useNavigate, useParams } from 'react-router-dom';
+import api from '../../../services/api';
 
 export default function NovoFilme() {
     return (
         <>
-            <div>
-                <Button className="mb-3" href="/filmes">Voltar</Button>
-            </div>
+            <Container>
+                <Row>
+                    <Col><Button className="mb-3" href="/filmes">Voltar</Button></Col>
+                </Row>
+            </Container>
 
-            <div>
+            <Container>
                 <Form>
-                    <Form.Group className="mb-3" controlId="name">
-                        <Form.Label>Nome</Form.Label>
-                        <Form.Control type="text" placeholder="Nome" />
-                    </Form.Group>
+                    <Row>
+                        <Col xs lg="4">
+                            <Form.Group className="mb-3" controlId="name">
 
-                    <Button variant="primary" type="submit">
-                        Submit
-                    </Button>
+                            </Form.Group>
+                        </Col>
+                    </Row>
+                    <Row>
+                        <Col>
+                            <Button variant="primary" type="submit">
+                                Submit
+                            </Button>
+                        </Col>
+                    </Row>
                 </Form>
-            </div>
-
+            </Container>
         </>
     )
 }

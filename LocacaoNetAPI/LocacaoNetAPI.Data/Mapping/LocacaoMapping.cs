@@ -11,7 +11,7 @@ namespace LocacaoNetAPI.Data.Mapping
         {
             builder.ToTable("Locacao");
             builder.HasOne(i => i.Cliente).WithMany().HasForeignKey(fk => fk.Id_Cliente);
-            builder.HasOne(i => i.Filme).WithOne().HasForeignKey<Locacao>(fk => fk.Id_Filme);
+            builder.HasOne(i => i.Filme).WithMany().HasForeignKey(fk => fk.Id_Filme);
         }
     }
 }
