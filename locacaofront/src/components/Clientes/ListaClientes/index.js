@@ -19,6 +19,17 @@ export default function Clientes() {
 
     const navigate = useNavigate()
 
+    async function carregarClientes() {
+        try {
+            var response = await api.get(`api/clientes`);
+
+            setClientes(response.data);
+            carregarClientes();
+        } catch (error) {
+            alert('Não foi possível carregar os clientes');
+        }
+    }
+
     async function editarCliente(id) {
         try {
             navigate(`/clientes/novo/${id}`)
@@ -44,10 +55,8 @@ export default function Clientes() {
 
 
     useEffect(() => {
-        api.get(`api/clientes`).then(
-            response => { setClientes(response.data) }
-        )
-    }, [excluirCliente])
+        carregarClientes();
+    }, [])
 
 
     return (

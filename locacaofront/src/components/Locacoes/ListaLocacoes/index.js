@@ -17,6 +17,16 @@ export default function Locacoes() {
 
     const navigate = useNavigate()
 
+    async function carregarLocacoes() {
+        try {
+            var response = await api.get(`api/locacoes`);
+
+            setLocacoes(response.data);
+        } catch (error) {
+            alert('Não foi possível carregar as Locações');
+        }
+    }
+
     async function editarLocacao(id) {
         try {
             navigate(`/locacoes/novo/${id}`)
@@ -28,8 +38,8 @@ export default function Locacoes() {
     async function excluirLocacao(id) {
         try {
             await api.delete(`api/locacoes/${id}`);
+            carregarLocacoes();
             setModal(false);
-
         } catch (error) {
             alert('Não foi possível deletar a Locação');
         }
@@ -42,10 +52,8 @@ export default function Locacoes() {
 
 
     useEffect(() => {
-        api.get(`api/locacoes`).then(
-            response => { setLocacoes(response.data) }
-        )
-    }, [excluirLocacao])
+        carregarLocacoes();
+    }, [])
 
 
     return (
