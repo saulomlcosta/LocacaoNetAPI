@@ -1,23 +1,19 @@
 import React from 'react';
-import Button from 'react-bootstrap/Button';
-import Table from 'react-bootstrap/Table';
+import { Button, Table, Container, Row, Col } from 'react-bootstrap';
 
 export default function Locacoes() {
     return (
         <>
-            <div>
-                <Button className="mb-3" href="/clientes/">Clientes</Button>
-            </div>
+            <Container>
+                <Row>
+                    <Col> <Button className="mb-3" href="/clientes/">Clientes</Button></Col>
+                    <Col><Button className="mb-3" href="/filmes/">Filmes</Button></Col>
+                    <Col><Button className="mb-3" href="/locacao/novo">Criar Nova Locação</Button></Col>
 
-            <div>
-                <Button className="mb-3" href="/filmes/">Filmes</Button>
-            </div>
+                </Row>
+            </Container>
 
-            <div>
-                <Button className="mb-3" href="/locacao/novo">Criar Nova Locação</Button>
-            </div>
-
-            <div>
+            <Container>
                 <Table striped bordered hover>
                     <thead>
                         <tr>
@@ -57,7 +53,7 @@ export default function Locacoes() {
                         </tr>
                     </tbody>
                 </Table>
-            </div>
+            </Container>
         </>
     )
 }
