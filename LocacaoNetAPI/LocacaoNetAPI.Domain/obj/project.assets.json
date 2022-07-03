@@ -13,11 +13,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\saulo\\Desktop\\LocacaoNetAPI\\LocacaoNetAPI\\LocacaoNetAPI.Domain\\LocacaoNetAPI.Domain.csproj",
+      "projectUniqueName": "C:\\@Projetos\\LocacaoNetAPI\\LocacaoNetAPI\\LocacaoNetAPI.Domain\\LocacaoNetAPI.Domain.csproj",
       "projectName": "LocacaoNetAPI.Domain",
-      "projectPath": "C:\\Users\\saulo\\Desktop\\LocacaoNetAPI\\LocacaoNetAPI\\LocacaoNetAPI.Domain\\LocacaoNetAPI.Domain.csproj",
+      "projectPath": "C:\\@Projetos\\LocacaoNetAPI\\LocacaoNetAPI\\LocacaoNetAPI.Domain\\LocacaoNetAPI.Domain.csproj",
       "packagesPath": "C:\\Users\\saulo\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\saulo\\Desktop\\LocacaoNetAPI\\LocacaoNetAPI\\LocacaoNetAPI.Domain\\obj\\",
+      "outputPath": "C:\\@Projetos\\LocacaoNetAPI\\LocacaoNetAPI\\LocacaoNetAPI.Domain\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\saulo\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -60,7 +60,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.300\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.301\\RuntimeIdentifierGraph.json"
       }
     }
   }
