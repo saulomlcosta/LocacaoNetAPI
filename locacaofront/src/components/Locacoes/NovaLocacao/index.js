@@ -10,8 +10,6 @@ export default function NovaLocacao() {
     const [clientes, setClientes] = useState([]);
     const [filmes, setFilmes] = useState([]);
     const [idFilme, setIdFilme] = useState('');
-    const [dataLocacao, setDataLocacao] = useState('');
-    const [dataDevolucao, setDataDevolucao] = useState('');
 
 
     const { locacaoId } = useParams();
@@ -33,8 +31,6 @@ export default function NovaLocacao() {
             setId(response.data.id);
             setIdCliente(response.data.cliente.id);
             setIdFilme(response.data.filme.id);
-            setDataLocacao(response.data.dataNascimento);
-            setDataDevolucao(response.data.dataNascimento);
         } catch (error) {
             alert('Erro ao recuperar locacao' + error);
             navigate(`/locacoes`)
@@ -64,16 +60,11 @@ export default function NovaLocacao() {
     async function handleChange(e) {
         e.preventDefault();
 
-        var dataLocacaoFormat = new Date(dataLocacao).toISOString();
-
-        var dataDevolucaoFormat = new Date(dataDevolucao).toISOString();
 
 
         const payload = {
             id_Cliente: idCliente,
             id_Filme: idFilme,
-            dataLocacao: dataLocacaoFormat,
-            dataDevolucao: dataDevolucaoFormat
         }
 
         try {
@@ -134,30 +125,6 @@ export default function NovaLocacao() {
                                         <option key={filme.id} value={filme.id}>{filme.titulo}</option>
                                     ))}
                                 </Form.Select>
-                            </Form.Group>
-                        </Col>
-                    </Row>
-                    <Row>
-                        <Col xs lg="2">
-                            <Form.Group className="mb-3" controlId="dataLocacao">
-                                <Form.Label>Data de Locação</Form.Label>
-                                <Form.Control
-                                    value={dataLocacao}
-                                    onChange={e => setDataLocacao(e.target.value)}
-                                    type="date"
-                                    name="dataLocacao"
-                                    placeholder="Data de Locação" />
-                            </Form.Group>
-                        </Col>
-                        <Col xs lg="2">
-                            <Form.Group className="mb-3" controlId="dataNascimento">
-                                <Form.Label>Data de Devolução</Form.Label>
-                                <Form.Control
-                                    value={dataDevolucao}
-                                    onChange={e => setDataDevolucao(e.target.value)}
-                                    type="date"
-                                    name="dataDevolucao"
-                                    placeholder="Data de Devolução" />
                             </Form.Group>
                         </Col>
                     </Row>
