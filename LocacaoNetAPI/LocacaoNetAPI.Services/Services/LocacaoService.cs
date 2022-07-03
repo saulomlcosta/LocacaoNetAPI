@@ -20,11 +20,12 @@ namespace LocacaoNetAPI.Application.Services
         private readonly IMapper mapper;
 
 
-        public LocacaoService(ILocacaoRepository repository, IMapper mapper, IRepository<Filme> filmeRepository)
+        public LocacaoService(ILocacaoRepository repository, IMapper mapper, IRepository<Filme> filmeRepository, IRepository<Cliente> clienteRepository)
         {
             _repository = repository;
             this.mapper = mapper;
             _filmeRepository = filmeRepository;
+            _clienteRepository = clienteRepository;
         }
 
         public List<Locacao> Get()
@@ -82,6 +83,29 @@ namespace LocacaoNetAPI.Application.Services
                 throw new Exception("Locação não encontrada");
 
             _locacao = mapper.Map<Locacao>(locacaoDTO);
+
+            var _filmeAlocado = _repository.Find(x => x.Id_Filme == locacaoDTO.Id_Filme);
+
+            if (_filmeAlocado != null)
+            {
+                if (_filmeAlocado.DataDevolucao >= DateTime.Now)
+                {
+                    throw new ApplicationException("Filme já alocado");
+                }
+
+                _repository.Delete(_filmeAlocado);
+            }
+
+            var _cliente = _clienteRepository.Find(x => x.Id == locacaoDTO.Id_Cliente);
+
+            if (_cliente == null) throw new ApplicationException("Cliente não encontrado na base de dados");
+
+            var _filme = _filmeRepository.Find(x => x.Id == locacaoDTO.Id_Filme);
+
+            if (_filme == null) throw new ApplicationException("Filme não encontrado na base de dados");
+
+
+            _locacao.AdicionarDataDevolucao(_filme);
 
             return _repository.Update(_locacao);
         }
