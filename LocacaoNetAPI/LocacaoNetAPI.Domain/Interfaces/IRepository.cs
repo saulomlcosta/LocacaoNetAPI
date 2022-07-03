@@ -5,6 +5,7 @@ namespace LocacaoNetAPI.Domain.Interfaces
 {
     public interface IRepository<TEntity>  where TEntity : class
     {
+        List<TEntity> GetAll();
         TEntity Create(TEntity model);
 
         List<TEntity> Create(List<TEntity> model);

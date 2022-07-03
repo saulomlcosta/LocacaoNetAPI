@@ -360,6 +360,19 @@ namespace LocacaoNetAPI.Data.Repositories
 
         #region 'Search Methods Async'
 
+        public List<TEntity> GetAll()
+        {
+            try
+            {
+                return DbSet.AsNoTracking().ToList();
+            }
+            catch (Exception)
+            {
+
+                throw;
+            }
+        }
+
         public TEntity Get(Expression<Func<TEntity, bool>> where)
         {
             try

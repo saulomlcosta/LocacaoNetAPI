@@ -1,29 +1,60 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import Button from 'react-bootstrap/Button';
 import Form from 'react-bootstrap/Form';
-import "react-datepicker/dist/react-datepicker.css";
-import DatePicker from "react-datepicker";
+import { Link, useNavigate, useParams } from 'react-router-dom';
 import api from '../../../services/api';
 
 export default function NovoCliente() {
+    const [id, setId] = useState(null);
     const [nome, setNome] = useState('');
     const [cpf, setCPF] = useState('');
     const [dataNascimento, setDataNascimento] = useState('');
 
+    const { clienteId } = useParams();
 
-    async function novoCliente(e) {
+    const navigate = useNavigate();
+
+
+    useEffect(() => {
+        if (clienteId === '0')
+            return;
+        else
+            carregaCliente();
+    }, clienteId)
+
+    async function carregaCliente() {
+        try {
+            const response = await api.get(`api/clientes/${clienteId}`);
+
+            setId(response.data.id);
+            setNome(response.data.nome);
+            setCPF(response.data.cpf);
+            setDataNascimento(response.data.dataNascimento);
+        } catch (error) {
+            alert('Erro ao recuperar cliente' + error);
+            navigate(`/clientes`)
+        }
+    }
+
+    async function handleChange(e) {
         e.preventDefault();
 
         var dataNascimentoFormat = new Date(dataNascimento).toISOString();
 
-        const data = {
+        const payload = {
             nome,
             cpf,
             dataNascimento: dataNascimentoFormat
         }
 
         try {
-            await api.post('api/Clientes', data)
+            if (clienteId === '0') {
+                await api.post('api/Clientes', payload);
+            } else {
+                payload.id = id;
+                await api.put(`api/clientes/${clienteId}`, payload);
+            }
+            navigate(`/clientes`);
         } catch (error) {
             alert(' Erro ao criar cliente ' + error);
         }
@@ -36,7 +67,7 @@ export default function NovoCliente() {
             </div>
 
             <div>
-                <Form onSubmit={novoCliente}>
+                <Form onSubmit={handleChange}>
                     <Form.Group className="mb-3" controlId="name">
                         <Form.Label>Nome</Form.Label>
                         <Form.Control

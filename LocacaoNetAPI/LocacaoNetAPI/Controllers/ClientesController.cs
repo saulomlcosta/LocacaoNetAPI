@@ -22,7 +22,7 @@ namespace LocacaoNetAPI.Controllers
         [HttpGet]
         public ActionResult<List<Cliente>> Get()
         {
-            return Ok(clienteService.Get());
+            return clienteService.Get();
         }
 
         // GET api/<ClientesController>/5

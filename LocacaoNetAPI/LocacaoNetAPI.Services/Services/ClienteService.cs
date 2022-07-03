@@ -17,10 +17,11 @@ namespace LocacaoNetAPI.Application.Services
 
         public List<Cliente> Get()
         {
-            throw new NotImplementedException();
+            List<Cliente> _clientes = _repository.GetAll();
+
+            return _clientes;
         }
 
-    
         public Cliente GetById(int id)
         {
             var _cliente =  _repository.Get(w => w.Id == id);

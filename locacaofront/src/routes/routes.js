@@ -18,7 +18,7 @@ export default function Routes() {
                 <Route path="/" element={<Locacoes />}></Route>
                 <Route path="/locacao/novo" element={<NovaLocacao />}></Route>
                 <Route path="/clientes" element={<Clientes />}></Route>
-                <Route path="/clientes/novo" element={<NovoCliente />}></Route>
+                <Route path="/clientes/novo/:clienteId" element={<NovoCliente />}></Route>
                 <Route path="/filmes" element={<Filmes />}></Route>
                 <Route path="/filmes/novo" element={<NovoFilme />}></Route>
             </Switch>

@@ -1,9 +1,55 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
+import { useNavigate, Link } from 'react-router-dom';
 import Button from 'react-bootstrap/Button';
 import Table from 'react-bootstrap/Table';
+import { Modal } from 'react-bootstrap';
+
+import api from '../../../services/api';
 
 
 export default function Clientes() {
+    const [clientes, setClientes] = useState([]);
+    const [clienteSelecionado, setClienteSelecionado] = useState();
+
+    const [modal, setModal] = useState(false);
+
+    const fecharModal = () => setModal(false);
+
+
+    const navigate = useNavigate();
+
+    async function editarCliente(id) {
+        try {
+            navigate(`/clientes/novo/${id}`)
+        } catch (error) {
+            alert('Não foi possível ir para tela de edição');
+        }
+    }
+
+
+    async function excluirCliente(id) {
+        try {
+            await api.delete(`api/clientes/${id}`);
+            setModal(false);
+
+        } catch (error) {
+            alert('Não foi possível deletar o cliente');
+        }
+    }
+
+    async function selecionarCliente(cliente) {
+        setClienteSelecionado(cliente);
+        setModal(true);
+    }
+
+
+    useEffect(() => {
+        api.get(`api/clientes`).then(
+            response => { setClientes(response.data) }
+        )
+    }, [excluirCliente])
+
+
     return (
         <>
             <div>
@@ -11,40 +57,46 @@ export default function Clientes() {
             </div>
 
             <div>
-                <Button className="mb-3" href="/clientes/novo">Criar Novo Cliente</Button>
+                <Button className="mb-3" href="/clientes/novo/0">Criar Novo Cliente</Button>
             </div>
 
             <div>
                 <Table striped bordered hover>
                     <thead>
                         <tr>
-                            <th>#</th>
                             <th>Nome</th>
                             <th>CPF</th>
-                            <th>Email</th>
+                            <th>Editar</th>
+                            <th>Excluir</th>
                         </tr>
                     </thead>
                     <tbody>
-                        <tr>
-                            <td>1</td>
-                            <td>Mark</td>
-                            <td>Otto</td>
-                            <td>@mdo</td>
-                        </tr>
-                        <tr>
-                            <td>2</td>
-                            <td>Jacob</td>
-                            <td>Thornton</td>
-                            <td>@fat</td>
-                        </tr>
-                        <tr>
-                            <td>3</td>
-                            <td colSpan={2}>Larry the Bird</td>
-                            <td>@twitter</td>
-                        </tr>
+                        {clientes.map(cliente => (
+
+                            <tr>
+                                <td>{cliente.nome}</td>
+                                <td>{cliente.cpf}</td>
+                                <td><Button variant="info" onClick={() => editarCliente(cliente.id)}>Editar</Button>
+                                </td>
+                                <td><Button variant="danger" onClick={() => selecionarCliente(cliente)}>Excluir</Button>
+                                </td>
+                            </tr>
+                        ))}
                     </tbody>
                 </Table>
             </div>
+
+            <Modal show={modal} onHide={fecharModal}>
+                <Modal.Body>Você confirma a exclusão deste(a) cliente? : {clienteSelecionado && clienteSelecionado.nome}</Modal.Body>
+                <Modal.Footer>
+                    <Button variant="secondary" onClick={fecharModal}>
+                        Não
+                    </Button>
+                    <Button variant="primary" onClick={() => excluirCliente(clienteSelecionado.id)}>
+                        Sim
+                    </Button>
+                </Modal.Footer>
+            </Modal>
         </>
     )
 }
