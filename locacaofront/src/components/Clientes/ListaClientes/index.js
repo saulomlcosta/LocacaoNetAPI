@@ -71,8 +71,8 @@ export default function Clientes() {
                         <tr>
                             <th>Nome</th>
                             <th>CPF</th>
-                            <th>Editar</th>
-                            <th>Excluir</th>
+                            <th></th>
+                            <th></th>
                         </tr>
                     </thead>
                     <tbody>

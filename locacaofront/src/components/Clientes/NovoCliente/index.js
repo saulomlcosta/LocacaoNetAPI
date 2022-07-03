@@ -65,7 +65,6 @@ export default function NovoCliente() {
             <Container>
                 <Row>
                     <Col><Button className="mb-3" href="/clientes">Voltar</Button></Col>
-                    <Col><Button className="mb-3" href="/clientes/novo/0">Criar Novo Cliente</Button></Col>
                 </Row>
             </Container>
 
