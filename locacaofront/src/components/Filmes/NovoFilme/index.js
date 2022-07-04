@@ -19,7 +19,6 @@ export default function NovoFilme() {
 
         try {
             await api.post('api/filmes/upload', formData);
-            alert('Filmes enviados com sucesso');
             navigate(`/filmes`);
         } catch (error) {
             alert(' Erro ao enviar os filmes ' + error);
