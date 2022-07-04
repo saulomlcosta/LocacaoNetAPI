@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\@Projetos\\LocacaoNetAPI\\LocacaoNetAPI\\LocacaoNetAPI.Domain\\LocacaoNetAPI.Domain.csproj": {}
+    "C:\\Labs\\LocacaoNetAPI\\LocacaoNetAPI\\LocacaoNetAPI.Domain\\LocacaoNetAPI.Domain.csproj": {}
   },
   "projects": {
-    "C:\\@Projetos\\LocacaoNetAPI\\LocacaoNetAPI\\LocacaoNetAPI.Domain\\LocacaoNetAPI.Domain.csproj": {
+    "C:\\Labs\\LocacaoNetAPI\\LocacaoNetAPI\\LocacaoNetAPI.Domain\\LocacaoNetAPI.Domain.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\@Projetos\\LocacaoNetAPI\\LocacaoNetAPI\\LocacaoNetAPI.Domain\\LocacaoNetAPI.Domain.csproj",
+        "projectUniqueName": "C:\\Labs\\LocacaoNetAPI\\LocacaoNetAPI\\LocacaoNetAPI.Domain\\LocacaoNetAPI.Domain.csproj",
         "projectName": "LocacaoNetAPI.Domain",
-        "projectPath": "C:\\@Projetos\\LocacaoNetAPI\\LocacaoNetAPI\\LocacaoNetAPI.Domain\\LocacaoNetAPI.Domain.csproj",
-        "packagesPath": "C:\\Users\\saulo\\.nuget\\packages\\",
-        "outputPath": "C:\\@Projetos\\LocacaoNetAPI\\LocacaoNetAPI\\LocacaoNetAPI.Domain\\obj\\",
+        "projectPath": "C:\\Labs\\LocacaoNetAPI\\LocacaoNetAPI\\LocacaoNetAPI.Domain\\LocacaoNetAPI.Domain.csproj",
+        "packagesPath": "C:\\Users\\saulo.lima\\.nuget\\packages\\",
+        "outputPath": "C:\\Labs\\LocacaoNetAPI\\LocacaoNetAPI\\LocacaoNetAPI.Domain\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\saulo\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\saulo.lima\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [

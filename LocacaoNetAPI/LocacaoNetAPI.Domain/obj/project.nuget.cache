@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "XXXx/XUY6aoKOidvrOnohOoOWwkBNE6gWFPQ2nTaWdKHePdnIBk0FDJhvYlDNdEaGxPEmF6IkRTHhlJEggoxHA==",
+  "dgSpecHash": "dwx8wZsIY1o6F+pcRNnrjWaVRv7wcmLx2cOQFxIp9hS6D/2/T1tDJTaewZDipED+Wcp5SWsR1S/JCOU621G2rw==",
   "success": true,
-  "projectFilePath": "C:\\@Projetos\\LocacaoNetAPI\\LocacaoNetAPI\\LocacaoNetAPI.Domain\\LocacaoNetAPI.Domain.csproj",
+  "projectFilePath": "C:\\Labs\\LocacaoNetAPI\\LocacaoNetAPI\\LocacaoNetAPI.Domain\\LocacaoNetAPI.Domain.csproj",
   "expectedPackageFiles": [],
   "logs": []
 }

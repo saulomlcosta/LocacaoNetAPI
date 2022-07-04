@@ -9,22 +9,27 @@ namespace LocacaoNetAPI.IoC
 {
     public static class NativeInjector
     {
-        //public static IServiceCollection RegisterServices(this IServiceCollection services)
-        //{
-        //    #region Repository
+        public static IServiceCollection RegisterServices(this IServiceCollection services)
+        {
+            #region Repository
 
-        //    services.AddScoped(typeof(IRepository<>), typeof(Repository<>));
+            services.AddScoped(typeof(IRepository<>), typeof(Repository<>));
+            services.AddScoped<ILocacaoRepository, LocacaoRepository>();
 
-        //    #endregion
 
-        //    #region Services
+            #endregion
 
-        //    services.AddScoped<IClienteService, ClienteService>();
-        //    services.AddScoped<IFilmeService, FilmeService>();
+            #region Services
 
-        //    #endregion
+            services.AddScoped<IClienteService, ClienteService>();
+            services.AddScoped<IFilmeService, FilmeService>();
+            services.AddScoped<ILocacaoService, LocacaoService>();
 
-        //    return services;
-        //}
+
+            #endregion
+
+
+            return services;
+        }
     }
 }

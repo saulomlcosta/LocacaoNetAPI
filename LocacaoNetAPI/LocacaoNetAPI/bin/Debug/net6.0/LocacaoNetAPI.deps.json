@@ -13,6 +13,7 @@
           "EPPlus": "6.0.5",
           "LocacaoNetAPI.Application": "1.0.0",
           "LocacaoNetAPI.Data": "1.0.0",
+          "LocacaoNetAPI.IoC": "1.0.0",
           "Microsoft.EntityFrameworkCore": "6.0.6",
           "Microsoft.EntityFrameworkCore.SqlServer": "6.0.6",
           "Newtonsoft.Json": "13.0.1",
@@ -607,6 +608,16 @@
         "runtime": {
           "LocacaoNetAPI.Domain.dll": {}
         }
+      },
+      "LocacaoNetAPI.IoC/1.0.0": {
+        "dependencies": {
+          "LocacaoNetAPI.Application": "1.0.0",
+          "LocacaoNetAPI.Data": "1.0.0",
+          "LocacaoNetAPI.Domain": "1.0.0"
+        },
+        "runtime": {
+          "LocacaoNetAPI.IoC.dll": {}
+        }
       }
     }
   },
@@ -1054,6 +1065,11 @@
       "sha512": ""
     },
     "LocacaoNetAPI.Domain/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "LocacaoNetAPI.IoC/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""

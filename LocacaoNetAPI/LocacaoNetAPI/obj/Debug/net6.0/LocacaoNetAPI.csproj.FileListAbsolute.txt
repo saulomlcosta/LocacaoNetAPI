@@ -239,3 +239,5 @@ C:\@Projetos\LocacaoNetAPI\LocacaoNetAPI\LocacaoNetAPI\obj\Debug\net6.0\LocacaoN
 C:\@Projetos\LocacaoNetAPI\LocacaoNetAPI\LocacaoNetAPI\obj\Debug\net6.0\ref\LocacaoNetAPI.dll
 C:\@Projetos\LocacaoNetAPI\LocacaoNetAPI\LocacaoNetAPI\bin\Debug\net6.0\AutoMapper.dll
 C:\@Projetos\LocacaoNetAPI\LocacaoNetAPI\LocacaoNetAPI\bin\Debug\net6.0\AutoMapper.Extensions.Microsoft.DependencyInjection.dll
+C:\Labs\LocacaoNetAPI\LocacaoNetAPI\LocacaoNetAPI\bin\Debug\net6.0\AutoMapper.dll
+C:\Labs\LocacaoNetAPI\LocacaoNetAPI\LocacaoNetAPI\bin\Debug\net6.0\AutoMapper.Extensions.Microsoft.DependencyInjection.dll
