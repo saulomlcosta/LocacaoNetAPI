@@ -150,6 +150,9 @@
           "net6.0": {
             "targetAlias": "net6.0",
             "projectReferences": {
+              "C:\\@Projetos\\LocacaoNetAPI\\LocacaoNetAPI\\LocacaoNetAPI.Data\\LocacaoNetAPI.Data.csproj": {
+                "projectPath": "C:\\@Projetos\\LocacaoNetAPI\\LocacaoNetAPI\\LocacaoNetAPI.Data\\LocacaoNetAPI.Data.csproj"
+              },
               "C:\\@Projetos\\LocacaoNetAPI\\LocacaoNetAPI\\LocacaoNetAPI.Domain\\LocacaoNetAPI.Domain.csproj": {
                 "projectPath": "C:\\@Projetos\\LocacaoNetAPI\\LocacaoNetAPI\\LocacaoNetAPI.Domain\\LocacaoNetAPI.Domain.csproj"
               }

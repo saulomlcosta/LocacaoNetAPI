@@ -1,8 +1,10 @@
 ﻿using AutoMapper;
 using LocacaoNetAPI.Application.DTO;
 using LocacaoNetAPI.Application.Interfaces;
+using LocacaoNetAPI.Data.Context;
 using LocacaoNetAPI.Domain.Entities;
 using LocacaoNetAPI.Domain.Interfaces;
+using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -16,16 +18,18 @@ namespace LocacaoNetAPI.Application.Services
         private readonly ILocacaoRepository _repository;
         private readonly IRepository<Filme> _filmeRepository;
         private readonly IRepository<Cliente> _clienteRepository;
+        private readonly LocacaoNetAPIContext _context;
 
         private readonly IMapper mapper;
 
 
-        public LocacaoService(ILocacaoRepository repository, IMapper mapper, IRepository<Filme> filmeRepository, IRepository<Cliente> clienteRepository)
+        public LocacaoService(ILocacaoRepository repository, IMapper mapper, IRepository<Filme> filmeRepository, IRepository<Cliente> clienteRepository, LocacaoNetAPIContext context)
         {
             _repository = repository;
             this.mapper = mapper;
             _filmeRepository = filmeRepository;
             _clienteRepository = clienteRepository;
+            _context = context;
         }
 
         public List<Locacao> Get()
@@ -57,8 +61,6 @@ namespace LocacaoNetAPI.Application.Services
                 {
                     throw new ApplicationException("Filme já alocado");
                 }
-
-                _repository.Delete(_filmeAlocado);
             }
 
             var _cliente = _clienteRepository.Find(x => x.Id == locacaoDTO.Id_Cliente);
@@ -92,8 +94,6 @@ namespace LocacaoNetAPI.Application.Services
                 {
                     throw new ApplicationException("Filme já alocado");
                 }
-
-                _repository.Delete(_filmeAlocado);
             }
 
             var _cliente = _clienteRepository.Find(x => x.Id == locacaoDTO.Id_Cliente);
@@ -118,5 +118,20 @@ namespace LocacaoNetAPI.Application.Services
 
             return _repository.Delete(_locacao);
         }
+
+        public List<FilmesMaisAlugadosDTO> FilmesMaisAlugadosAno()
+        {
+            var filmes = _context
+                .Locacoes
+                .Include(i => i.Filme)
+                .Where(x => x.DataLocacao.Year == DateTime.Now.Year)
+                .GroupBy(g => g.Filme.Titulo)
+                .Select(s => new FilmesMaisAlugadosDTO { Titulo = s.Key, Quantidade = s.Count() })
+                .OrderByDescending(o => o.Quantidade)
+                .Take(5)
+                .ToList();
+
+            return filmes;
+        }      
     }
 }

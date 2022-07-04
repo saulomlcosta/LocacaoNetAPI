@@ -96,6 +96,9 @@ export default function Locacoes() {
                         ))}
                     </tbody>
                 </Table>
+                <Row>
+                    <a href='https://localhost:7047/api/Locacoes/FilmesMaisAlugadosAno' download>Filmes Mais Alugados Último Ano</a>
+                </Row>
                 <Modal show={modal} onHide={fecharModal}>
                     {/* <Modal.Body>Você confirma a exclusão desta locação? : {locacaoSelecionada && locacaoSelecionada.nome}</Modal.Body> */}
                     <Modal.Body>Você confirma a exclusão desta locação?</Modal.Body>

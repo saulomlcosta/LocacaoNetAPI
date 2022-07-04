@@ -2,8 +2,16 @@
 using LocacaoNetAPI.Application.Interfaces;
 using LocacaoNetAPI.Domain.Entities;
 using Microsoft.AspNetCore.Mvc;
+using OfficeOpenXml;
+using OfficeOpenXml.Table;
 
 // For more information on enabling Web API for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+
+public class UserInfo{
+    public string UserName { get; set; }
+    public int Age { get; set; }
+
+}
 
 namespace LocacaoNetAPI.Controllers
 {
@@ -57,6 +65,30 @@ namespace LocacaoNetAPI.Controllers
             locacaoService.Delete(id);
 
             return NoContent();
+        }
+
+        [HttpGet("FilmesMaisAlugadosAno")]
+        public async Task<IActionResult> FilmesMaisAlugadosAno(CancellationToken cancellationToken)
+        {
+            ExcelPackage.LicenseContext = LicenseContext.NonCommercial;
+
+            // query data from database  
+            await Task.Yield();
+            var itens = locacaoService.FilmesMaisAlugadosAno();
+           
+            var stream = new MemoryStream();
+
+            using (var package = new ExcelPackage(stream))
+            {
+                var workSheet = package.Workbook.Worksheets.Add("Sheet1");
+                workSheet.Cells.LoadFromCollection(itens, true);
+                package.Save();
+            }
+            stream.Position = 0;
+            string excelName = $"FilmesMaisAlugadosAno-{DateTime.Now.ToString("yyyyMMddHHmmssfff")}.xlsx";
+
+            //return File(stream, "application/octet-stream", excelName);  
+            return File(stream, "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet", excelName);
         }
     }
 }

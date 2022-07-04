@@ -12,6 +12,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\LocacaoNetAPI.Data\LocacaoNetAPI.Data.csproj" />
     <ProjectReference Include="..\LocacaoNetAPI.Domain\LocacaoNetAPI.Domain.csproj" />
   </ItemGroup>
 
