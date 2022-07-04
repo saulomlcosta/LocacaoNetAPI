@@ -28,13 +28,13 @@ export default function Filmes() {
         }
     }
 
-    async function editarFilme(id) {
-        try {
-            navigate(`/filmes/novo/${id}`)
-        } catch (error) {
-            alert('Não foi possível ir para tela de edição');
-        }
-    }
+    // async function editarFilme(id) {
+    //     try {
+    //         navigate(`/filmes/novo/${id}`)
+    //     } catch (error) {
+    //         alert('Não foi possível ir para tela de edição');
+    //     }
+    // }
 
     async function excluirFilme(id) {
         try {
@@ -69,7 +69,7 @@ export default function Filmes() {
                             <th>Título</th>
                             <th>Classificação Indicativa</th>
                             <th>Lançamento</th>
-                            <th></th>
+                            {/* <th></th> */}
                             <th></th>
                         </tr>
                     </thead>
@@ -79,10 +79,10 @@ export default function Filmes() {
                                 <td>{filme.titulo}</td>
                                 <td>{filme.classificacaoIndicativa}</td>
                                 <td>{filme.lancamento}</td>
-                                <td><Button variant="info" onClick={() => editarFilme(filme.id)}>
+                                {/* <td><Button variant="info" onClick={() => editarFilme(filme.id)}>
                                     <FiEdit size={25} color="#17202a" />
                                 </Button>
-                                </td>
+                                </td> */}
                                 <td><Button variant="danger" onClick={() => selecionarFilme(filme)}>
                                     <FiUserX size={25} color="#17202a" />
                                 </Button>
