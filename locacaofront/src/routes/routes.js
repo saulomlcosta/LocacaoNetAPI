@@ -20,7 +20,7 @@ export default function Routes() {
                 <Route path="/clientes" element={<Clientes />}></Route>
                 <Route path="/clientes/novo/:clienteId" element={<NovoCliente />}></Route>
                 <Route path="/filmes" element={<Filmes />}></Route>
-                <Route path="/filmes/novo:filmeId" element={<NovoFilme />}></Route>
+                <Route path="/filmes/novo/:filmeId" element={<NovoFilme />}></Route>
             </Switch>
         </BrowserRouter>
     )
