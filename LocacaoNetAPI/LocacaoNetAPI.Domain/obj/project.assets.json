@@ -8,19 +8,19 @@
     "net6.0": []
   },
   "packageFolders": {
-    "C:\\Users\\saulo.lima\\.nuget\\packages\\": {}
+    "C:\\Users\\Saulo Lima\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Labs\\LocacaoNetAPI\\LocacaoNetAPI\\LocacaoNetAPI.Domain\\LocacaoNetAPI.Domain.csproj",
+      "projectUniqueName": "C:\\Users\\Saulo Lima\\dev\\locacaoNet\\LocacaoNetAPI\\LocacaoNetAPI\\LocacaoNetAPI.Domain\\LocacaoNetAPI.Domain.csproj",
       "projectName": "LocacaoNetAPI.Domain",
-      "projectPath": "C:\\Labs\\LocacaoNetAPI\\LocacaoNetAPI\\LocacaoNetAPI.Domain\\LocacaoNetAPI.Domain.csproj",
-      "packagesPath": "C:\\Users\\saulo.lima\\.nuget\\packages\\",
-      "outputPath": "C:\\Labs\\LocacaoNetAPI\\LocacaoNetAPI\\LocacaoNetAPI.Domain\\obj\\",
+      "projectPath": "C:\\Users\\Saulo Lima\\dev\\locacaoNet\\LocacaoNetAPI\\LocacaoNetAPI\\LocacaoNetAPI.Domain\\LocacaoNetAPI.Domain.csproj",
+      "packagesPath": "C:\\Users\\Saulo Lima\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\Saulo Lima\\dev\\locacaoNet\\LocacaoNetAPI\\LocacaoNetAPI\\LocacaoNetAPI.Domain\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\saulo.lima\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\Saulo Lima\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -51,7 +51,8 @@
           "net47",
           "net471",
           "net472",
-          "net48"
+          "net48",
+          "net481"
         ],
         "assetTargetFallback": true,
         "warn": true,
@@ -60,7 +61,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.301\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.100\\RuntimeIdentifierGraph.json"
       }
     }
   }

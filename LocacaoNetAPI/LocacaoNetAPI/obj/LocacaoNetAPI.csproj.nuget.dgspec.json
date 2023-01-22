@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Labs\\LocacaoNetAPI\\LocacaoNetAPI\\LocacaoNetAPI\\LocacaoNetAPI.csproj": {}
+    "C:\\Users\\Saulo Lima\\dev\\locacaoNet\\LocacaoNetAPI\\LocacaoNetAPI\\LocacaoNetAPI\\LocacaoNetAPI.csproj": {}
   },
   "projects": {
-    "C:\\Labs\\LocacaoNetAPI\\LocacaoNetAPI\\LocacaoNetAPI.Data\\LocacaoNetAPI.Data.csproj": {
+    "C:\\Users\\Saulo Lima\\dev\\locacaoNet\\LocacaoNetAPI\\LocacaoNetAPI\\LocacaoNetAPI.Data\\LocacaoNetAPI.Data.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Labs\\LocacaoNetAPI\\LocacaoNetAPI\\LocacaoNetAPI.Data\\LocacaoNetAPI.Data.csproj",
+        "projectUniqueName": "C:\\Users\\Saulo Lima\\dev\\locacaoNet\\LocacaoNetAPI\\LocacaoNetAPI\\LocacaoNetAPI.Data\\LocacaoNetAPI.Data.csproj",
         "projectName": "LocacaoNetAPI.Data",
-        "projectPath": "C:\\Labs\\LocacaoNetAPI\\LocacaoNetAPI\\LocacaoNetAPI.Data\\LocacaoNetAPI.Data.csproj",
-        "packagesPath": "C:\\Users\\saulo.lima\\.nuget\\packages\\",
-        "outputPath": "C:\\Labs\\LocacaoNetAPI\\LocacaoNetAPI\\LocacaoNetAPI.Data\\obj\\",
+        "projectPath": "C:\\Users\\Saulo Lima\\dev\\locacaoNet\\LocacaoNetAPI\\LocacaoNetAPI\\LocacaoNetAPI.Data\\LocacaoNetAPI.Data.csproj",
+        "packagesPath": "C:\\Users\\Saulo Lima\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Saulo Lima\\dev\\locacaoNet\\LocacaoNetAPI\\LocacaoNetAPI\\LocacaoNetAPI.Data\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\saulo.lima\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Saulo Lima\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -28,8 +28,8 @@
           "net6.0": {
             "targetAlias": "net6.0",
             "projectReferences": {
-              "C:\\Labs\\LocacaoNetAPI\\LocacaoNetAPI\\LocacaoNetAPI.Domain\\LocacaoNetAPI.Domain.csproj": {
-                "projectPath": "C:\\Labs\\LocacaoNetAPI\\LocacaoNetAPI\\LocacaoNetAPI.Domain\\LocacaoNetAPI.Domain.csproj"
+              "C:\\Users\\Saulo Lima\\dev\\locacaoNet\\LocacaoNetAPI\\LocacaoNetAPI\\LocacaoNetAPI.Domain\\LocacaoNetAPI.Domain.csproj": {
+                "projectPath": "C:\\Users\\Saulo Lima\\dev\\locacaoNet\\LocacaoNetAPI\\LocacaoNetAPI\\LocacaoNetAPI.Domain\\LocacaoNetAPI.Domain.csproj"
               }
             }
           }
@@ -59,7 +59,8 @@
             "net47",
             "net471",
             "net472",
-            "net48"
+            "net48",
+            "net481"
           ],
           "assetTargetFallback": true,
           "warn": true,
@@ -68,21 +69,21 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.301\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.100\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\Labs\\LocacaoNetAPI\\LocacaoNetAPI\\LocacaoNetAPI.Domain\\LocacaoNetAPI.Domain.csproj": {
+    "C:\\Users\\Saulo Lima\\dev\\locacaoNet\\LocacaoNetAPI\\LocacaoNetAPI\\LocacaoNetAPI.Domain\\LocacaoNetAPI.Domain.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Labs\\LocacaoNetAPI\\LocacaoNetAPI\\LocacaoNetAPI.Domain\\LocacaoNetAPI.Domain.csproj",
+        "projectUniqueName": "C:\\Users\\Saulo Lima\\dev\\locacaoNet\\LocacaoNetAPI\\LocacaoNetAPI\\LocacaoNetAPI.Domain\\LocacaoNetAPI.Domain.csproj",
         "projectName": "LocacaoNetAPI.Domain",
-        "projectPath": "C:\\Labs\\LocacaoNetAPI\\LocacaoNetAPI\\LocacaoNetAPI.Domain\\LocacaoNetAPI.Domain.csproj",
-        "packagesPath": "C:\\Users\\saulo.lima\\.nuget\\packages\\",
-        "outputPath": "C:\\Labs\\LocacaoNetAPI\\LocacaoNetAPI\\LocacaoNetAPI.Domain\\obj\\",
+        "projectPath": "C:\\Users\\Saulo Lima\\dev\\locacaoNet\\LocacaoNetAPI\\LocacaoNetAPI\\LocacaoNetAPI.Domain\\LocacaoNetAPI.Domain.csproj",
+        "packagesPath": "C:\\Users\\Saulo Lima\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Saulo Lima\\dev\\locacaoNet\\LocacaoNetAPI\\LocacaoNetAPI\\LocacaoNetAPI.Domain\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\saulo.lima\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Saulo Lima\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -113,7 +114,8 @@
             "net47",
             "net471",
             "net472",
-            "net48"
+            "net48",
+            "net481"
           ],
           "assetTargetFallback": true,
           "warn": true,
@@ -122,21 +124,21 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.301\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.100\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\Labs\\LocacaoNetAPI\\LocacaoNetAPI\\LocacaoNetAPI.IoC\\LocacaoNetAPI.IoC.csproj": {
+    "C:\\Users\\Saulo Lima\\dev\\locacaoNet\\LocacaoNetAPI\\LocacaoNetAPI\\LocacaoNetAPI.IoC\\LocacaoNetAPI.IoC.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Labs\\LocacaoNetAPI\\LocacaoNetAPI\\LocacaoNetAPI.IoC\\LocacaoNetAPI.IoC.csproj",
+        "projectUniqueName": "C:\\Users\\Saulo Lima\\dev\\locacaoNet\\LocacaoNetAPI\\LocacaoNetAPI\\LocacaoNetAPI.IoC\\LocacaoNetAPI.IoC.csproj",
         "projectName": "LocacaoNetAPI.IoC",
-        "projectPath": "C:\\Labs\\LocacaoNetAPI\\LocacaoNetAPI\\LocacaoNetAPI.IoC\\LocacaoNetAPI.IoC.csproj",
-        "packagesPath": "C:\\Users\\saulo.lima\\.nuget\\packages\\",
-        "outputPath": "C:\\Labs\\LocacaoNetAPI\\LocacaoNetAPI\\LocacaoNetAPI.IoC\\obj\\",
+        "projectPath": "C:\\Users\\Saulo Lima\\dev\\locacaoNet\\LocacaoNetAPI\\LocacaoNetAPI\\LocacaoNetAPI.IoC\\LocacaoNetAPI.IoC.csproj",
+        "packagesPath": "C:\\Users\\Saulo Lima\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Saulo Lima\\dev\\locacaoNet\\LocacaoNetAPI\\LocacaoNetAPI\\LocacaoNetAPI.IoC\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\saulo.lima\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Saulo Lima\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -150,14 +152,14 @@
           "net6.0": {
             "targetAlias": "net6.0",
             "projectReferences": {
-              "C:\\Labs\\LocacaoNetAPI\\LocacaoNetAPI\\LocacaoNetAPI.Data\\LocacaoNetAPI.Data.csproj": {
-                "projectPath": "C:\\Labs\\LocacaoNetAPI\\LocacaoNetAPI\\LocacaoNetAPI.Data\\LocacaoNetAPI.Data.csproj"
+              "C:\\Users\\Saulo Lima\\dev\\locacaoNet\\LocacaoNetAPI\\LocacaoNetAPI\\LocacaoNetAPI.Data\\LocacaoNetAPI.Data.csproj": {
+                "projectPath": "C:\\Users\\Saulo Lima\\dev\\locacaoNet\\LocacaoNetAPI\\LocacaoNetAPI\\LocacaoNetAPI.Data\\LocacaoNetAPI.Data.csproj"
               },
-              "C:\\Labs\\LocacaoNetAPI\\LocacaoNetAPI\\LocacaoNetAPI.Domain\\LocacaoNetAPI.Domain.csproj": {
-                "projectPath": "C:\\Labs\\LocacaoNetAPI\\LocacaoNetAPI\\LocacaoNetAPI.Domain\\LocacaoNetAPI.Domain.csproj"
+              "C:\\Users\\Saulo Lima\\dev\\locacaoNet\\LocacaoNetAPI\\LocacaoNetAPI\\LocacaoNetAPI.Domain\\LocacaoNetAPI.Domain.csproj": {
+                "projectPath": "C:\\Users\\Saulo Lima\\dev\\locacaoNet\\LocacaoNetAPI\\LocacaoNetAPI\\LocacaoNetAPI.Domain\\LocacaoNetAPI.Domain.csproj"
               },
-              "C:\\Labs\\LocacaoNetAPI\\LocacaoNetAPI\\LocacaoNetAPI.Services\\LocacaoNetAPI.Application.csproj": {
-                "projectPath": "C:\\Labs\\LocacaoNetAPI\\LocacaoNetAPI\\LocacaoNetAPI.Services\\LocacaoNetAPI.Application.csproj"
+              "C:\\Users\\Saulo Lima\\dev\\locacaoNet\\LocacaoNetAPI\\LocacaoNetAPI\\LocacaoNetAPI.Services\\LocacaoNetAPI.Application.csproj": {
+                "projectPath": "C:\\Users\\Saulo Lima\\dev\\locacaoNet\\LocacaoNetAPI\\LocacaoNetAPI\\LocacaoNetAPI.Services\\LocacaoNetAPI.Application.csproj"
               }
             }
           }
@@ -177,7 +179,8 @@
             "net47",
             "net471",
             "net472",
-            "net48"
+            "net48",
+            "net481"
           ],
           "assetTargetFallback": true,
           "warn": true,
@@ -186,21 +189,21 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.301\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.100\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\Labs\\LocacaoNetAPI\\LocacaoNetAPI\\LocacaoNetAPI.Services\\LocacaoNetAPI.Application.csproj": {
+    "C:\\Users\\Saulo Lima\\dev\\locacaoNet\\LocacaoNetAPI\\LocacaoNetAPI\\LocacaoNetAPI.Services\\LocacaoNetAPI.Application.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Labs\\LocacaoNetAPI\\LocacaoNetAPI\\LocacaoNetAPI.Services\\LocacaoNetAPI.Application.csproj",
+        "projectUniqueName": "C:\\Users\\Saulo Lima\\dev\\locacaoNet\\LocacaoNetAPI\\LocacaoNetAPI\\LocacaoNetAPI.Services\\LocacaoNetAPI.Application.csproj",
         "projectName": "LocacaoNetAPI.Application",
-        "projectPath": "C:\\Labs\\LocacaoNetAPI\\LocacaoNetAPI\\LocacaoNetAPI.Services\\LocacaoNetAPI.Application.csproj",
-        "packagesPath": "C:\\Users\\saulo.lima\\.nuget\\packages\\",
-        "outputPath": "C:\\Labs\\LocacaoNetAPI\\LocacaoNetAPI\\LocacaoNetAPI.Services\\obj\\",
+        "projectPath": "C:\\Users\\Saulo Lima\\dev\\locacaoNet\\LocacaoNetAPI\\LocacaoNetAPI\\LocacaoNetAPI.Services\\LocacaoNetAPI.Application.csproj",
+        "packagesPath": "C:\\Users\\Saulo Lima\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Saulo Lima\\dev\\locacaoNet\\LocacaoNetAPI\\LocacaoNetAPI\\LocacaoNetAPI.Services\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\saulo.lima\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Saulo Lima\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -214,11 +217,11 @@
           "net6.0": {
             "targetAlias": "net6.0",
             "projectReferences": {
-              "C:\\Labs\\LocacaoNetAPI\\LocacaoNetAPI\\LocacaoNetAPI.Data\\LocacaoNetAPI.Data.csproj": {
-                "projectPath": "C:\\Labs\\LocacaoNetAPI\\LocacaoNetAPI\\LocacaoNetAPI.Data\\LocacaoNetAPI.Data.csproj"
+              "C:\\Users\\Saulo Lima\\dev\\locacaoNet\\LocacaoNetAPI\\LocacaoNetAPI\\LocacaoNetAPI.Data\\LocacaoNetAPI.Data.csproj": {
+                "projectPath": "C:\\Users\\Saulo Lima\\dev\\locacaoNet\\LocacaoNetAPI\\LocacaoNetAPI\\LocacaoNetAPI.Data\\LocacaoNetAPI.Data.csproj"
               },
-              "C:\\Labs\\LocacaoNetAPI\\LocacaoNetAPI\\LocacaoNetAPI.Domain\\LocacaoNetAPI.Domain.csproj": {
-                "projectPath": "C:\\Labs\\LocacaoNetAPI\\LocacaoNetAPI\\LocacaoNetAPI.Domain\\LocacaoNetAPI.Domain.csproj"
+              "C:\\Users\\Saulo Lima\\dev\\locacaoNet\\LocacaoNetAPI\\LocacaoNetAPI\\LocacaoNetAPI.Domain\\LocacaoNetAPI.Domain.csproj": {
+                "projectPath": "C:\\Users\\Saulo Lima\\dev\\locacaoNet\\LocacaoNetAPI\\LocacaoNetAPI\\LocacaoNetAPI.Domain\\LocacaoNetAPI.Domain.csproj"
               }
             }
           }
@@ -248,7 +251,8 @@
             "net47",
             "net471",
             "net472",
-            "net48"
+            "net48",
+            "net481"
           ],
           "assetTargetFallback": true,
           "warn": true,
@@ -257,21 +261,21 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.301\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.100\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\Labs\\LocacaoNetAPI\\LocacaoNetAPI\\LocacaoNetAPI\\LocacaoNetAPI.csproj": {
+    "C:\\Users\\Saulo Lima\\dev\\locacaoNet\\LocacaoNetAPI\\LocacaoNetAPI\\LocacaoNetAPI\\LocacaoNetAPI.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Labs\\LocacaoNetAPI\\LocacaoNetAPI\\LocacaoNetAPI\\LocacaoNetAPI.csproj",
+        "projectUniqueName": "C:\\Users\\Saulo Lima\\dev\\locacaoNet\\LocacaoNetAPI\\LocacaoNetAPI\\LocacaoNetAPI\\LocacaoNetAPI.csproj",
         "projectName": "LocacaoNetAPI",
-        "projectPath": "C:\\Labs\\LocacaoNetAPI\\LocacaoNetAPI\\LocacaoNetAPI\\LocacaoNetAPI.csproj",
-        "packagesPath": "C:\\Users\\saulo.lima\\.nuget\\packages\\",
-        "outputPath": "C:\\Labs\\LocacaoNetAPI\\LocacaoNetAPI\\LocacaoNetAPI\\obj\\",
+        "projectPath": "C:\\Users\\Saulo Lima\\dev\\locacaoNet\\LocacaoNetAPI\\LocacaoNetAPI\\LocacaoNetAPI\\LocacaoNetAPI.csproj",
+        "packagesPath": "C:\\Users\\Saulo Lima\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Saulo Lima\\dev\\locacaoNet\\LocacaoNetAPI\\LocacaoNetAPI\\LocacaoNetAPI\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\saulo.lima\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Saulo Lima\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -285,14 +289,14 @@
           "net6.0": {
             "targetAlias": "net6.0",
             "projectReferences": {
-              "C:\\Labs\\LocacaoNetAPI\\LocacaoNetAPI\\LocacaoNetAPI.Data\\LocacaoNetAPI.Data.csproj": {
-                "projectPath": "C:\\Labs\\LocacaoNetAPI\\LocacaoNetAPI\\LocacaoNetAPI.Data\\LocacaoNetAPI.Data.csproj"
+              "C:\\Users\\Saulo Lima\\dev\\locacaoNet\\LocacaoNetAPI\\LocacaoNetAPI\\LocacaoNetAPI.Data\\LocacaoNetAPI.Data.csproj": {
+                "projectPath": "C:\\Users\\Saulo Lima\\dev\\locacaoNet\\LocacaoNetAPI\\LocacaoNetAPI\\LocacaoNetAPI.Data\\LocacaoNetAPI.Data.csproj"
               },
-              "C:\\Labs\\LocacaoNetAPI\\LocacaoNetAPI\\LocacaoNetAPI.IoC\\LocacaoNetAPI.IoC.csproj": {
-                "projectPath": "C:\\Labs\\LocacaoNetAPI\\LocacaoNetAPI\\LocacaoNetAPI.IoC\\LocacaoNetAPI.IoC.csproj"
+              "C:\\Users\\Saulo Lima\\dev\\locacaoNet\\LocacaoNetAPI\\LocacaoNetAPI\\LocacaoNetAPI.IoC\\LocacaoNetAPI.IoC.csproj": {
+                "projectPath": "C:\\Users\\Saulo Lima\\dev\\locacaoNet\\LocacaoNetAPI\\LocacaoNetAPI\\LocacaoNetAPI.IoC\\LocacaoNetAPI.IoC.csproj"
               },
-              "C:\\Labs\\LocacaoNetAPI\\LocacaoNetAPI\\LocacaoNetAPI.Services\\LocacaoNetAPI.Application.csproj": {
-                "projectPath": "C:\\Labs\\LocacaoNetAPI\\LocacaoNetAPI\\LocacaoNetAPI.Services\\LocacaoNetAPI.Application.csproj"
+              "C:\\Users\\Saulo Lima\\dev\\locacaoNet\\LocacaoNetAPI\\LocacaoNetAPI\\LocacaoNetAPI.Services\\LocacaoNetAPI.Application.csproj": {
+                "projectPath": "C:\\Users\\Saulo Lima\\dev\\locacaoNet\\LocacaoNetAPI\\LocacaoNetAPI\\LocacaoNetAPI.Services\\LocacaoNetAPI.Application.csproj"
               }
             }
           }
@@ -342,7 +346,8 @@
             "net47",
             "net471",
             "net472",
-            "net48"
+            "net48",
+            "net481"
           ],
           "assetTargetFallback": true,
           "warn": true,
@@ -354,7 +359,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.301\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.100\\RuntimeIdentifierGraph.json"
         }
       }
     }
