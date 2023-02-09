@@ -89,6 +89,6 @@ namespace LocacaoNetAPI.Controllers
 
             //return File(stream, "application/octet-stream", excelName);  
             return File(stream, "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet", excelName);
-        }
+        }       
     }
 }

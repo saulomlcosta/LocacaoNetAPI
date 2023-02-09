@@ -3,9 +3,11 @@ using LocacaoNetAPI.Application.Interfaces;
 using LocacaoNetAPI.Application.Services;
 using LocacaoNetAPI.Data.Context;
 using LocacaoNetAPI.Data.Repositories;
+using LocacaoNetAPI.Data.Services;
 using LocacaoNetAPI.Domain.Interfaces;
 using LocacaoNetAPI.IoC;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.DependencyInjection;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -18,7 +20,9 @@ builder.Services.RegisterServices();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
-builder.Services.AddDbContext<LocacaoNetAPIContext>(opt => opt.UseSqlServer(builder.Configuration.GetConnectionString("DB_LOCACAO_PROD")));
+var connectionString = builder.Configuration.GetConnectionString("DB_LOCACAO_PROD");
+builder.Services.AddDbContext<LocacaoNetAPIContext>(opt => opt.UseSqlServer(connectionString).EnableSensitiveDataLogging());
+
 
 
 
@@ -30,6 +34,10 @@ if (app.Environment.IsDevelopment())
     app.UseSwagger();
     app.UseSwaggerUI();
 }
+
+// Applying migrations on start project
+DatabaseManagementService.MigrateOnInit(app);
+
 
 app.UseCors(opt => { opt.AllowAnyOrigin().AllowAnyHeader().AllowAnyMethod(); });
 

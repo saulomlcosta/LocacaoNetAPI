@@ -17,6 +17,7 @@ namespace LocacaoNetAPI.IoC
             services.AddScoped<ILocacaoRepository, LocacaoRepository>();
 
 
+
             #endregion
 
             #region Services
@@ -24,7 +25,6 @@ namespace LocacaoNetAPI.IoC
             services.AddScoped<IClienteService, ClienteService>();
             services.AddScoped<IFilmeService, FilmeService>();
             services.AddScoped<ILocacaoService, LocacaoService>();
-
 
             #endregion
 

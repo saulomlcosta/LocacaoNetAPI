@@ -1,4 +1,5 @@
-﻿using LocacaoNetAPI.Domain.Entities;
+﻿using LocacaoNetAPI.Data.Mapping;
+using LocacaoNetAPI.Domain.Entities;
 using Microsoft.EntityFrameworkCore;
 using System.Reflection;
 

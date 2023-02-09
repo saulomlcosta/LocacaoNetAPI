@@ -320,3 +320,5 @@ C:\Users\Saulo Lima\dev\locacaoNet\LocacaoNetAPI\LocacaoNetAPI\LocacaoNetAPI\obj
 C:\Users\Saulo Lima\dev\locacaoNet\LocacaoNetAPI\LocacaoNetAPI\LocacaoNetAPI\obj\Debug\net6.0\LocacaoNetAPI.csproj.CopyComplete
 C:\Users\Saulo Lima\dev\locacaoNet\LocacaoNetAPI\LocacaoNetAPI\LocacaoNetAPI\obj\Debug\net6.0\LocacaoNetAPI.genruntimeconfig.cache
 C:\Users\Saulo Lima\dev\locacaoNet\LocacaoNetAPI\LocacaoNetAPI\LocacaoNetAPI\obj\Debug\net6.0\ref\LocacaoNetAPI.dll
+C:\Users\Saulo Lima\dev\locacaoNet\LocacaoNetAPI\LocacaoNetAPI\LocacaoNetAPI\bin\Debug\net6.0\Humanizer.dll
+C:\Users\Saulo Lima\dev\locacaoNet\LocacaoNetAPI\LocacaoNetAPI\LocacaoNetAPI\bin\Debug\net6.0\Microsoft.EntityFrameworkCore.Design.dll
